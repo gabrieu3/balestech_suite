@@ -22,3 +22,48 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+
+
+
+*.log
+
+.idea/
+node_modules
+package-lock.json
+**/.attach_pid*
+
+# Eclipse
+.classpath
+.project
+.settings/
+**/logFile_IS_UNDEFINED
+**/SCHEMA_SDBANCONET.sql
+**/SCHEMA_SDIMIO.sql
+
+# Maven
+pom.xml.versionsBackup
+target/
+dist/
+bin/
+
+# JRebel
+**/rebel.xml
+
+.sonarlint/**
+.metadata/**
+.recommenders/**
+**/.gradle/
+
+logstash.json
+
+transaction-logs/
+*.iml
+*.ipr
+*.iws
+/.metadata/
+/.recommenders/
+**/dependencia*.txt
+**/logstash.json.*.gz
+
+owasp-database/*
