@@ -1,13 +1,13 @@
-package com.balestech.Indicators;
+package com.balestech.indicators;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinancialIndicatorsApplication {
+public class IndicatorsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinancialIndicatorsApplication.class, args);
+		SpringApplication.run(IndicatorsApplication.class, args);
 	}
 
 }
