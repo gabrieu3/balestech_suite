@@ -17,9 +17,9 @@
 	  - ARTIFACT ID DEFINITIONS
 	  -->
 	<groupId>com.balestech.api.microservice</groupId>
-	<artifactId>indicators</artifactId>
+	<artifactId>b3</artifactId>
 	<packaging>jar</packaging>
-	<name>Balestech :: Financial System :: APIs :: Microservice :: Indicators</name>
+	<name>Balestech :: Financial System :: APIs :: Microservice :: B3</name>
 
 	<!--
      - PROPERTIES

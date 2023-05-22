@@ -36,7 +36,9 @@
      - MODULES
      -->
 	<modules>
-		<module>Indicators</module>
+		<module>indicators</module>
+		<module>calculation-methods</module>
+		<module>b3</module>
 	</modules>
 
 	<dependencies>
