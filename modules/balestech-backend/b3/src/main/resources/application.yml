@@ -1,0 +1,4 @@
+server:
+  port: 8051
+  servlet:
+    context-path: /b3

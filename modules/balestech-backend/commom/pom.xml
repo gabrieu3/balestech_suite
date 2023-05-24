@@ -4,42 +4,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<!--
-	  - PAI -> POM RAIZ
+	  - PAI -> SPRING FRAMEWORK
 	  -->
 	<parent>
-		<groupId>com.balestech.suite</groupId>
-		<artifactId>balestech-suite</artifactId>
-		<version>1.0.0-SNAPSHOT</version>
-		<relativePath>../pom.xml</relativePath>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.1.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<!--
 	  - ARTIFACT ID DEFINITIONS
 	  -->
-	<groupId>com.balestech.suite.api</groupId>
-	<artifactId>api</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
-	<name>Balestech :: Financial System :: APIs :: Modules</name>
+	<groupId>com.balestech.api.microservice</groupId>
+	<artifactId>commom</artifactId>
+	<packaging>jar</packaging>
+	<name>Balestech :: Financial System :: APIs :: Commom</name>
 
 	<!--
      - PROPERTIES
      -->
 	<properties>
-		<java.version>20</java.version>
-		<main.basedir>${basedir}/..</main.basedir>
-		<maven.compiler.source>20</maven.compiler.source>
-		<maven.compiler.target>20</maven.compiler.target>
+		<main.basedir>${basedir}/../..</main.basedir>
 	</properties>
-
-	<!--
-     - MODULES
-     -->
-	<modules>
-		<module>indicators</module>
-		<module>calculation-methods</module>
-		<module>b3</module>
-	</modules>
 
 	<!--
 	 - DEPENDENCIES
@@ -51,9 +38,8 @@
          -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<artifactId>spring-boot-starter</artifactId>
 		</dependency>
-
 
 		<!--
           - LOMBOK -> Sintaxe Sugar
@@ -150,42 +136,9 @@
 			<version>2.0.2</version>
 		</dependency>
 
-		<!--
-		  - Projeto COMMOM BALESTECH
-		 -->
-		<dependency>
-			<groupId>com.balestech.api.microservice</groupId>
-			<artifactId>commom</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-
-		<!--
-		  - Usado para ler o application.yml
-		 -->
-		<dependency>
-			<groupId>org.yaml</groupId>
-			<artifactId>snakeyaml</artifactId>
-			<version>2.0</version>
-		</dependency>
-
-
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<excludes>
-						<exclude>
-							<groupId>org.projectlombok</groupId>
-							<artifactId>lombok</artifactId>
-						</exclude>
-					</excludes>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+
 
 </project>
+
