@@ -19,6 +19,7 @@
 	<groupId>com.balestech.api.microservice</groupId>
 	<artifactId>commom</artifactId>
 	<packaging>jar</packaging>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>Balestech :: Financial System :: APIs :: Commom</name>
 
 	<!--

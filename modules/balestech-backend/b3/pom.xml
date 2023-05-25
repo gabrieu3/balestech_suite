@@ -41,13 +41,6 @@
 	</dependencies>
 
 	<build>
-		<resources>
-			<resource>
-				<directory>
-					${project.basedir}/resources
-				</directory>
-			</resource>
-		</resources>
 
 		<plugins>
 		<!--
