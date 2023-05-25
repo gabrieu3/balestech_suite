@@ -28,5 +28,61 @@
 		<main.basedir>${basedir}/../..</main.basedir>
 	</properties>
 
+	<dependencies>
+		<!--
+		  - Gera o Swagger em swagger-ui/index.html
+		 -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.2</version>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+
+		<plugins>
+		<!--
+		  **
+		  * Plugin do Open api para gerar o código a partir do código swagger
+		  *
+		  * Templates Mustaches para Spring:
+		  * https://github.com/OpenAPITools/openapi-generator/tree/master/modules/openapi-generator/src/main/resources/JavaSpring
+		  ** -->
+			<plugin>
+				<groupId>org.openapitools</groupId>
+				<artifactId>openapi-generator-maven-plugin</artifactId>
+				<version>6.4.0</version>
+				<executions>
+					<execution>
+						<id>api-gateway</id>
+						<phase>generate-resources</phase>
+						<goals>
+							<goal>generate</goal>
+						</goals>
+						<configuration>
+							<inputSpec>${basedir}/src/main/resources/swagger/api.yaml</inputSpec>
+							<generatorName>spring</generatorName>
+							<supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
+							<modelPackage>com.balestech.b3.model.dto</modelPackage>
+							<apiPackage>com.balestech.b3.rest</apiPackage>
+							<templateDirectory>../mustaches</templateDirectory>
+							<configOptions>
+								<delegatePattern>true</delegatePattern>
+								<implicitHeaders>true</implicitHeaders>
+								<useJakartaEe>true</useJakartaEe>
+								<useTags>true</useTags>
+							</configOptions>
+							<additionalProperties>
+								<additionalProperty>useResponseEntity=true</additionalProperty>
+							</additionalProperties>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
 

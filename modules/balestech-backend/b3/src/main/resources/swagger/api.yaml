@@ -1,0 +1,113 @@
+openapi: 3.0.3
+info:
+  title: Swagger Balestech Finance System Suite - OpenAPI 3.0
+  description: |-
+    API utilizada para disponibilizar serviços para o sistema Finance Balestech System
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: apiteam@swagger.io
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.11
+externalDocs:
+  description: Find out more about Swagger
+  url: http://swagger.io
+servers:
+  - url: localhost:8051
+tags:
+  - name: b3
+    description: B3 Services
+    externalDocs:
+      description: Find out more
+      url: http://swagger.io
+paths:
+  /ibov/companies:
+    get:
+      tags:
+        - b3
+      summary: Companhias que compõe o índice IBOVESPA
+      description: Companhias que compõe o índice IBOVESPA
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ibovCompaniesResponse'
+        '400':
+          description: Bad Request
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/BalestechRestErrorDTO'
+        '404':
+          description: Pet not found
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/BalestechRestErrorDTO'
+        '405':
+          description: Validation exception
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/BalestechRestErrorDTO'
+        '500':
+          description: Internal Server Error
+          content:
+            application/json;charset=utf-8:
+              schema:
+                $ref: '#/components/schemas/BalestechRestErrorDTO'
+
+components:
+  schemas:
+    ibovCompaniesResponse:
+      type: object
+      properties:
+        cod:
+          type: string
+          example: RRRP3
+        asset:
+          type: string
+          example: 3R PETROLEUM
+        type:
+          type: string
+          example: ON NM
+        part:
+          type: integer
+          example: 20.25
+        theoricalQty:
+          type: integer
+          example: 10000.50
+    BalestechRestErrorDTO:
+      description: Response body.
+      type: object
+      properties:
+        error:
+          type: array
+          items:
+            $ref: '#/components/schemas/BalestechErrorDTO'
+          minItems: 1
+      required:
+        - error
+    BalestechErrorDTO:
+      description: Standardized error message.
+      type: object
+      properties:
+        code:
+          description: Error code.
+          type: string
+          pattern: BALESTECH-1234
+        message:
+          description: Detailed error message.
+          type: string
+        field:
+          description: Field with error.
+          type: string
+        action:
+          description: Suggest action.
+          type: string
+      required:
+        - code
+        - message

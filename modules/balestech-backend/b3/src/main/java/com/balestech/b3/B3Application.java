@@ -3,7 +3,7 @@ package com.balestech.b3;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.balestech")
 public class B3Application {
 
 	public static void main(String[] args) {
