@@ -26,6 +26,7 @@
      -->
 	<properties>
 		<main.basedir>${basedir}/../..</main.basedir>
+		<log4j-over-slf4j.version>2.0.0-alpha6</log4j-over-slf4j.version>
 	</properties>
 
 	<dependencies>
