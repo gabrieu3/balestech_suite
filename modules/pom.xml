@@ -28,6 +28,8 @@
      -->
 	<properties>
 		<main.basedir>${basedir}</main.basedir>
+		<maven.compiler.source>20</maven.compiler.source>
+		<maven.compiler.target>20</maven.compiler.target>
 	</properties>
 
 	<!--
