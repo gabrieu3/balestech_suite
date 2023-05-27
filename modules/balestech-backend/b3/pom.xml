@@ -51,8 +51,19 @@
 	</dependencies>
 
 	<build>
-
+		<!--
+		  - PERMITE EXECUTAR A CLASSE MAIN DO PROJETO VIA JAVA -JAR
+		  - mvn package spring-boot:repackage
+		  -->
 		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.balestech.b3.B3Application</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+			</plugin>
 		<!--
 		  **
 		  * Plugin do Open api para gerar o código a partir do código swagger
