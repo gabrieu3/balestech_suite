@@ -8,8 +8,14 @@
 
     <!--
     - LOCAL GERA ARQUIVO
+    -
+    - Define variável no windows:
+    - set LOG_DIR=C:\logs
+    -
+    - Define no Linux
+    - export LOG_DIR=/var/log
     -->
-    <property name="LOGS" value="C:\log" />
+    <property name="LOGS" value="${LOG_DIR:-/logs}" />
     <property name="LOG_FILE" value="${LOG_FILE:-logstash}"/>
 
     <!--
