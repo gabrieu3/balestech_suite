@@ -1,0 +1,9 @@
+databaseChangeLog:
+  - includeAll:
+      path: db/delta
+  - includeAll:
+      path: db/oracle/view
+#- includeAll:
+#    path: db/pos
+#- includeAll:
+#    path: db/test

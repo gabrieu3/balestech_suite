@@ -1,0 +1,25 @@
+databaseChangeLog:
+  -  changeSet:
+      id: createTableStock
+      author: Gabriel-Balestrin
+      changes:
+        - createTable:
+            tableName: stock
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: VARCHAR(10)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: company
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false

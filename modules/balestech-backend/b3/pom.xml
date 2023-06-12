@@ -30,6 +30,16 @@
 	</properties>
 
 	<dependencies>
+
+		<!--
+		  - Para permitir criar classes de conexão com o banco de dados
+		 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+
 		<!--
 		  - Gera o Swagger em swagger-ui/index.html
 		 -->
@@ -47,6 +57,45 @@
 			<artifactId>logstash-logback-encoder</artifactId>
 			<version>7.3</version>
 		</dependency>
+
+		<!--
+		  - Yahoo Finance Lib
+		 -->
+		<dependency>
+			<groupId>com.yahoofinance-api</groupId>
+			<artifactId>YahooFinanceAPI</artifactId>
+			<version>3.17.0</version>
+		</dependency>
+
+		<!--
+		  - Lib para fazer webscrapping
+		 -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.16.1</version>
+		</dependency>
+
+		<!--
+		  - Conexão com banco de dados Postgress
+		 -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.6.0</version>
+		</dependency>
+
+		<!--
+		  - Permite utilizar liquibase para criar tabelas e executar scripts
+		 -->
+		<dependency>
+			<groupId>org.liquibase</groupId>
+			<artifactId>liquibase-core</artifactId>
+			<version>4.22.0</version>
+		</dependency>
+
+
+
 
 	</dependencies>
 

@@ -1,0 +1,61 @@
+version: '3'
+volumes:
+   postgres-data:
+#  elk-data:
+#  portainer-data:
+#networks:
+#  balestech-network:
+services:
+#  portainer:
+#    ports:
+#      - '8000:9000/tcp'
+#    image: portainer/portainer
+#    ##### COMANDO PARA GERAR A SENHA DO PORTAINER
+#    # > docker run --rm httpd:2.4-alpine htpasswd -nbB admin 'superpassword' | cut -d ":" -f 2
+#    #
+#    command: --admin-password '$$2y$$05$$ZBq/6oanDzs3iwkhQCxF2uKoJsGXA0SI4jdu1PkFrnsKfpCH5Ae4G'
+#    volumes:
+#      - 'portainer-data:/data'
+#      - '/var/run/docker.sock:/var/run/docker.sock'
+#    networks:
+#      - balestech-network
+#  elk:
+#    image: sebp/elk:7.10.0
+#    volumes:
+#      - 'elk-data:/var/lib/elasticsearch'
+#    ports:
+#      - '5601:5601'
+#      - '9200:9200'
+#      - '5044:5044'
+#    environment:
+#     - ELASTICSEARCH_USER=elastic
+#     - ELASTICSEARCH_PASSWORD=s0m3C0mpl3xP@ssw0rd!
+#     - LOGSTASH_USER=elastic
+#     - LOGSTASH_PASSWORD=s0m3C0mpl3xP@ssw0rd!
+#     - KIBANA_USER=kibana
+#     - KIBANA_PASSWORD=s0m3C0mpl3xP@ssw0rd!
+#    networks:
+#      - balestech-network
+#    depends_on:
+#      - portainer
+#  balestech-b3:
+#    build:
+#      context: ./modules/balestech-backend/b3
+#      dockerfile: Dockerfile
+#      args:
+#        - BALESTECH_SUITE_B3_VERSION=1.0.0-SNAPSHOT
+#    networks:
+#      - balestech-network
+#    depends_on:
+#      - elk
+  db:
+    image: postgres
+    container_name: balestech_database
+    environment:
+      POSTGRES_USER: balestech
+      POSTGRES_PASSWORD: balestech
+      POSTGRES_DB: balestech
+    ports:
+      - 5432:5432
+    volumes:
+      - 'postgres-data:/var/lib/postgresql/data'
