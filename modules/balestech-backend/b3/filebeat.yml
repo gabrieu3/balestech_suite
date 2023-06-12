@@ -6,7 +6,7 @@ filebeat:
   inputs:
     -
       paths:
-        - /var/log/balestech.json
+        - /var/log/balestech_b3.json
       input_type: log
       json.message_key: rest
       json.keys_under_root: true

@@ -16,7 +16,7 @@
     - export LOG_DIR=/var/log
     -->
     <property name="LOGS" value="${LOG_DIR:-/logs}" />
-    <property name="LOG_FILE" value="${LOG_FILE:-logstash}"/>
+    <property name="LOG_FILE" value="${LOG_FILE:-balestech_b3}"/>
 
     <!--
     - CONFIGURA CONSOLE
@@ -31,7 +31,7 @@
     - CONFIGURA ARQUIVO
     -->
     <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOGS}/balestech.log</file>
+        <file>${LOGS}/balestech_b3.log</file>
         <encoder>
             <pattern>[%d{dd/MM/yyyy HH:mm:ss.SSS X}] [%-32mdc{traceId:----- traceId -----}] [%-33.-33thread] [%-5level] [%-70logger{70}] %msg%n</pattern>
         </encoder>

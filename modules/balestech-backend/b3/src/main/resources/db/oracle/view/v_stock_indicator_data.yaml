@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: createStockIndicatorData
+      author: Gabriel Balestrin
+      changes:
+        - createView:
+            catalogName: cat
+            encoding: UTF-8
+            fullDefinition: false
+            remarks: View para analisar as ações e seus indicadores
+            replaceIfExists: true
+            schemaName: public
+            selectQuery: select s.name,
+                                s.company,
+                                (select si.value_number
+                                  from stock_indicator si
+                                  where si.indicator_id = 1
+                                    and si.stock_id = s.id
+                                    and si.date_time_create = (select max(si2.date_time_create)
+                                                              from stock_indicator si2
+                                                              where si2.indicator_id = si.indicator_id
+                                                              and si2.stock_id = si.stock_id) ) price,
+                                (select si.value_number
+                                  from stock_indicator si
+                                  where si.indicator_id = 3
+                                    and si.stock_id = s.id
+                                    and si.date_time_create = (select max(si2.date_time_create)
+                                                               from stock_indicator si2
+                                                               where si2.indicator_id = si.indicator_id
+                                                               and si2.stock_id = si.stock_id) ) target,
+                                (select si.value_number
+                                  from stock_indicator si
+                                  where si.indicator_id = 2
+                                    and si.stock_id = s.id
+                                    and si.date_time_create = (select max(si2.date_time_create)
+                                                               from stock_indicator si2
+                                                               where si2.indicator_id = si.indicator_id
+                                                               and si2.stock_id = si.stock_id)) volume
+                          from stock s
+                          order by 4,1
+            viewName: v_stock_indicator_data

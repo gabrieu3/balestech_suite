@@ -1,0 +1,32 @@
+databaseChangeLog:
+  - changeSet:
+      id: insertDataIndicator
+      author: Gabriel-Balestrin
+      changes:
+        - insert:
+            tableName: indicator
+            columns:
+              - column:
+                  name: name
+                  value: PRICE
+              - column:
+                  name: description
+                  value: Preço da ação
+        - insert:
+            tableName: indicator
+            columns:
+              - column:
+                  name: name
+                  value: VOLUME
+              - column:
+                  name: description
+                  value: Volume de negociação
+        - insert:
+            tableName: indicator
+            columns:
+              - column:
+                  name: name
+                  value: TARGET
+              - column:
+                  name: description
+                  value: Preço alvo da ação

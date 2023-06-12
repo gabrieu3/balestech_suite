@@ -1,0 +1,5603 @@
+databaseChangeLog:
+  - changeSet:
+      id: insertDataStock
+      author: Gabriel-Balestrin
+      changes:
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBAS3
+              - column:
+                  name: company
+                  value: Banco do Brasil
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TAEE11
+              - column:
+                  name: company
+                  value: Taesa
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PETR4
+              - column:
+                  name: company
+                  value: Petrobrás
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITSA4
+              - column:
+                  name: company
+                  value: ITAUSA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBSE3
+              - column:
+                  name: company
+                  value: BB SEGURIDADE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TRPL4
+              - column:
+                  name: company
+                  value: ISA CTEEP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPLE6
+              - column:
+                  name: company
+                  value: COPEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: KLBN4
+              - column:
+                  name: company
+                  value: Klabin
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: UNIP6
+              - column:
+                  name: company
+                  value: UNIPAR CARBOCLORO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VALE3
+              - column:
+                  name: company
+                  value: Vale
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMIG4
+              - column:
+                  name: company
+                  value: CEMIG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GOAU4
+              - column:
+                  name: company
+                  value: METALURGICA GERDAU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AGRO3
+              - column:
+                  name: company
+                  value: BRASILAGRO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SAPR4
+              - column:
+                  name: company
+                  value: Sanepar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TAEE4
+              - column:
+                  name: company
+                  value: Taesa
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WEGE3
+              - column:
+                  name: company
+                  value: WEG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MRFG3
+              - column:
+                  name: company
+                  value: MARFRIG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: KLBN11
+              - column:
+                  name: company
+                  value: Klabin
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBDC3
+              - column:
+                  name: company
+                  value: Banco Bradesco
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMIN3
+              - column:
+                  name: company
+                  value: CSN MINERAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CXSE3
+              - column:
+                  name: company
+                  value: CAIXA SEGURIDADE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AESB3
+              - column:
+                  name: company
+                  value: AES BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SAPR11
+              - column:
+                  name: company
+                  value: Sanepar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBDC4
+              - column:
+                  name: company
+                  value: Banco Bradesco
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENAT3
+              - column:
+                  name: company
+                  value: ENAUTA PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: USIM5
+              - column:
+                  name: company
+                  value: USIMINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RANI3
+              - column:
+                  name: company
+                  value: CELULOSE IRANI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EGIE3
+              - column:
+                  name: company
+                  value: ENGIE BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ABCB4
+              - column:
+                  name: company
+                  value: BANCO ABC BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TASA4
+              - column:
+                  name: company
+                  value: TAURUS ARMAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENBR3
+              - column:
+                  name: company
+                  value: EDP BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SANB11
+              - column:
+                  name: company
+                  value: SANTANDER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSAN3
+              - column:
+                  name: company
+                  value: COSAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITUB4
+              - column:
+                  name: company
+                  value: Banco Itau Unibanco
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITSA3
+              - column:
+                  name: company
+                  value: ITAUSA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: B3SA3
+              - column:
+                  name: company
+                  value: B3
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRSR6
+              - column:
+                  name: company
+                  value: BANCO BANRISUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: KLBN3
+              - column:
+                  name: company
+                  value: Klabin
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PETR3
+              - column:
+                  name: company
+                  value: Petrobrás
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PSSA3
+              - column:
+                  name: company
+                  value: PORTO SEGURO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TAEE3
+              - column:
+                  name: company
+                  value: Taesa
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GGBR3
+              - column:
+                  name: company
+                  value: GERDAU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VIVT3
+              - column:
+                  name: company
+                  value: VIVO  TELEFÔNICA BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SANB4
+              - column:
+                  name: company
+                  value: SANTANDER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: KEPL3
+              - column:
+                  name: company
+                  value: KEPLER WEBER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPLE3
+              - column:
+                  name: company
+                  value: COPEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRAP4
+              - column:
+                  name: company
+                  value: BRADESPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AURE3
+              - column:
+                  name: company
+                  value: AUREN ENERGIA S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SANB3
+              - column:
+                  name: company
+                  value: SANTANDER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FESA4
+              - column:
+                  name: company
+                  value: FERBASA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VBBR3
+              - column:
+                  name: company
+                  value: VIBRA ENERGIA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FLRY3
+              - column:
+                  name: company
+                  value: FLEURY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALUP11
+              - column:
+                  name: company
+                  value: Alupar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IRBR3
+              - column:
+                  name: company
+                  value: IRB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NEOE3
+              - column:
+                  name: company
+                  value: NEOENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LEVE3
+              - column:
+                  name: company
+                  value: MAHLEMETAL LEVE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PRIO3
+              - column:
+                  name: company
+                  value: PETRO RIO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSMG3
+              - column:
+                  name: company
+                  value: COPASA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JBSS3
+              - column:
+                  name: company
+                  value: JBS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ROMI3
+              - column:
+                  name: company
+                  value: INDÚSTRIAS ROMI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SYNE3
+              - column:
+                  name: company
+                  value: SYN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPFE3
+              - column:
+                  name: company
+                  value: CPFL ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ABEV3
+              - column:
+                  name: company
+                  value: AMBEV
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMGB4
+              - column:
+                  name: company
+                  value: BANCO BMG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GGBR4
+              - column:
+                  name: company
+                  value: GERDAU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSNA3
+              - column:
+                  name: company
+                  value: CIA SIDERURGICA NACIONAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SAPR3
+              - column:
+                  name: company
+                  value: Sanepar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TASA3
+              - column:
+                  name: company
+                  value: TAURUS ARMAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SLCE3
+              - column:
+                  name: company
+                  value: SLC AGRICOLA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MGLU3
+              - column:
+                  name: company
+                  value: Magazine Luiza
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WIZC3
+              - column:
+                  name: company
+                  value: WIZ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRKM5
+              - column:
+                  name: company
+                  value: BRASKEM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CIEL3
+              - column:
+                  name: company
+                  value: CIELO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SHUL4
+              - column:
+                  name: company
+                  value: SCHULZ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BEES3
+              - column:
+                  name: company
+                  value: BANCO BANESTES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RAIZ4
+              - column:
+                  name: company
+                  value: Raízen
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SUZB3
+              - column:
+                  name: company
+                  value: SUZANO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: POSI3
+              - column:
+                  name: company
+                  value: POSITIVO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JHSF3
+              - column:
+                  name: company
+                  value: JHSF
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MOVI3
+              - column:
+                  name: company
+                  value: MOVIDA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: UNIP3
+              - column:
+                  name: company
+                  value: UNIPAR CARBOCLORO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MYPK3
+              - column:
+                  name: company
+                  value: IOCHPE MAXION
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITUB3
+              - column:
+                  name: company
+                  value: Banco Itau Unibanco
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALUP4
+              - column:
+                  name: company
+                  value: Alupar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GOAU3
+              - column:
+                  name: company
+                  value: METALURGICA GERDAU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RAPT4
+              - column:
+                  name: company
+                  value: RANDON
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OIBR3
+              - column:
+                  name: company
+                  value: OI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ELET3
+              - column:
+                  name: company
+                  value: ELETROBRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BAZA3
+              - column:
+                  name: company
+                  value: BANCO AMAZONIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GRND3
+              - column:
+                  name: company
+                  value: GRENDENE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAC11
+              - column:
+                  name: company
+                  value: BANCO BTG PACTUAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CBAV3
+              - column:
+                  name: company
+                  value: CBA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMIG3
+              - column:
+                  name: company
+                  value: CEMIG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BEEF3
+              - column:
+                  name: company
+                  value: MINERVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BEES4
+              - column:
+                  name: company
+                  value: BANCO BANESTES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: STBP3
+              - column:
+                  name: company
+                  value: SANTOS BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CAML3
+              - column:
+                  name: company
+                  value: CAMIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VIIA3
+              - column:
+                  name: company
+                  value: VIA S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CYRE3
+              - column:
+                  name: company
+                  value: CYRELA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALUP3
+              - column:
+                  name: company
+                  value: Alupar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENGI11
+              - column:
+                  name: company
+                  value: ENERGISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DXCO3
+              - column:
+                  name: company
+                  value: DURATEX
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TECN3
+              - column:
+                  name: company
+                  value: TECHNOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRAP3
+              - column:
+                  name: company
+                  value: BRADESPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LREN3
+              - column:
+                  name: company
+                  value: Lojas Renner
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: USIM3
+              - column:
+                  name: company
+                  value: USIMINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EQTL3
+              - column:
+                  name: company
+                  value: EQUATORIAL ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TIMS3
+              - column:
+                  name: company
+                  value: TIM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LAVV3
+              - column:
+                  name: company
+                  value: LAVVI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ETER3
+              - column:
+                  name: company
+                  value: ETERNIT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TRPL3
+              - column:
+                  name: company
+                  value: ISA CTEEP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RADL3
+              - column:
+                  name: company
+                  value: RAIA DROGASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SBSP3
+              - column:
+                  name: company
+                  value: SABESP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRPG5
+              - column:
+                  name: company
+                  value: TRONOX PIGMENTOS DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LOGG3
+              - column:
+                  name: company
+                  value: LOG COMMERCIAL PROPERTIES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AERI3
+              - column:
+                  name: company
+                  value: AERIS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: QUAL3
+              - column:
+                  name: company
+                  value: QUALICORP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EZTC3
+              - column:
+                  name: company
+                  value: EZ TEC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NEMO3
+              - column:
+                  name: company
+                  value: SUZANO HOLDING
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: POMO4
+              - column:
+                  name: company
+                  value: MARCOPOLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MRVE3
+              - column:
+                  name: company
+                  value: MRV
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPLE11
+              - column:
+                  name: company
+                  value: COPEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CGAS3
+              - column:
+                  name: company
+                  value: COMGÁS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PETZ3
+              - column:
+                  name: company
+                  value: PETZ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RRRP3
+              - column:
+                  name: company
+                  value: 3R PETROLEUM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MDIA3
+              - column:
+                  name: company
+                  value: M.DIAS BRANCO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CCRO3
+              - column:
+                  name: company
+                  value: CCR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSUD3
+              - column:
+                  name: company
+                  value: CSU DIGITAL S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CASH3
+              - column:
+                  name: company
+                  value: MÉLIUZ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JALL3
+              - column:
+                  name: company
+                  value: Jalles Machado
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AMER3
+              - column:
+                  name: company
+                  value: AMERICANAS S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VIVT4
+              - column:
+                  name: company
+                  value: VIVO  TELEFÔNICA BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: UGPA3
+              - column:
+                  name: company
+                  value: ULTRAPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSRN3
+              - column:
+                  name: company
+                  value: COSERN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FHER3
+              - column:
+                  name: company
+                  value: FERTILIZANTES HERINGER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ODPV3
+              - column:
+                  name: company
+                  value: ODONTOPREV
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: COGN3
+              - column:
+                  name: company
+                  value: Cogna Educação
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EKTR3
+              - column:
+                  name: company
+                  value: ELEKTRO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEBR3
+              - column:
+                  name: company
+                  value: CEB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HYPE3
+              - column:
+                  name: company
+                  value: HYPERA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TOTS3
+              - column:
+                  name: company
+                  value: TOTVS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RECV3
+              - column:
+                  name: company
+                  value: PetroRecôncavo
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TRIS3
+              - column:
+                  name: company
+                  value: TRISUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WHRL4
+              - column:
+                  name: company
+                  value: WHIRLPOOL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PMAM3
+              - column:
+                  name: company
+                  value: PARANAPANEMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRSR3
+              - column:
+                  name: company
+                  value: BANCO BANRISUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: UNIP5
+              - column:
+                  name: company
+                  value: UNIPAR CARBOCLORO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SQIA3
+              - column:
+                  name: company
+                  value: SINQIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MLAS3
+              - column:
+                  name: company
+                  value: Multilaser
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SMTO3
+              - column:
+                  name: company
+                  value: SÃO MARTINHO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RANI4
+              - column:
+                  name: company
+                  value: CELULOSE IRANI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TUPY3
+              - column:
+                  name: company
+                  value: TUPY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EALT4
+              - column:
+                  name: company
+                  value: ELECTRO ACO ALTONA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTSA4
+              - column:
+                  name: company
+                  value: METISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ELET6
+              - column:
+                  name: company
+                  value: ELETROBRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PGMN3
+              - column:
+                  name: company
+                  value: Pague Menos
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EMBR3
+              - column:
+                  name: company
+                  value: EMBRAER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FRAS3
+              - column:
+                  name: company
+                  value: FRASLE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SIMH3
+              - column:
+                  name: company
+                  value: SIMPAR S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TIET11
+              - column:
+                  name: company
+                  value: AES TIETE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CGRA4
+              - column:
+                  name: company
+                  value: GRAZZIOTIN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRFS3
+              - column:
+                  name: company
+                  value: BRF
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRKM3
+              - column:
+                  name: company
+                  value: BRASKEM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENGI4
+              - column:
+                  name: company
+                  value: ENERGISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: INTB3
+              - column:
+                  name: company
+                  value: Intelbras
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MDNE3
+              - column:
+                  name: company
+                  value: MOURA DUBEUX ENGENHARIA S/A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEEB3
+              - column:
+                  name: company
+                  value: COELBA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SOJA3
+              - column:
+                  name: company
+                  value: BOA SAFRA SEMENTES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PTBL3
+              - column:
+                  name: company
+                  value: PORTOBELLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RAIL3
+              - column:
+                  name: company
+                  value: RUMO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAN4
+              - column:
+                  name: company
+                  value: BANCO PAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SULA11
+              - column:
+                  name: company
+                  value: SUL AMÉRICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ARZZ3
+              - column:
+                  name: company
+                  value: AREZZO&CO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TTEN3
+              - column:
+                  name: company
+                  value: TRÊS TENTOS AGROINDUSTRIAL S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PCAR3
+              - column:
+                  name: company
+                  value: Grupo Pão de Açúcar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALSO3
+              - column:
+                  name: company
+                  value: ALIANSCSONAE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EQPA3
+              - column:
+                  name: company
+                  value: EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HAPV3
+              - column:
+                  name: company
+                  value: HAPVIDA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VIVA3
+              - column:
+                  name: company
+                  value: VIVARA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CVCB3
+              - column:
+                  name: company
+                  value: CVC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BNBR3
+              - column:
+                  name: company
+                  value: BANCO NORDESTE DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BGIP4
+              - column:
+                  name: company
+                  value: BANCO BANESE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LIGT3
+              - column:
+                  name: company
+                  value: LIGHT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AURA33
+              - column:
+                  name: company
+                  value: AURA MINERALS INC.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DIRR3
+              - column:
+                  name: company
+                  value: DIRECIONAL ENGENHARIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AZUL4
+              - column:
+                  name: company
+                  value: AZUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RENT3
+              - column:
+                  name: company
+                  value: LOCALIZA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CLSC4
+              - column:
+                  name: company
+                  value: CELESC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MULT3
+              - column:
+                  name: company
+                  value: MULTIPLAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTRE3
+              - column:
+                  name: company
+                  value: MITRE REALTY EMPREENDIMENTOS E PARTICIPAÇÕES S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OIBR4
+              - column:
+                  name: company
+                  value: OI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RLOG3
+              - column:
+                  name: company
+                  value: COSAN LOGÍSTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BIDI4
+              - column:
+                  name: company
+                  value: Banco Inter
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GMAT3
+              - column:
+                  name: company
+                  value: GRUPO MATEUS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AMBP3
+              - column:
+                  name: company
+                  value: AMBIPAR PARTICIPACOES E EMPREENDIMENTOS S/A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NRTQ3
+              - column:
+                  name: company
+                  value: NORTEC QUÍMICA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EVEN3
+              - column:
+                  name: company
+                  value: EVEN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VULC3
+              - column:
+                  name: company
+                  value: VULCABRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RAPT3
+              - column:
+                  name: company
+                  value: RANDON
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NTCO3
+              - column:
+                  name: company
+                  value: NATURA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EUCA3
+              - column:
+                  name: company
+                  value: EUCATEX
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GPAR3
+              - column:
+                  name: company
+                  value: CELGPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LWSA3
+              - column:
+                  name: company
+                  value: LOCAWEB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ASAI3
+              - column:
+                  name: company
+                  value: ASSAÍ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEAB3
+              - column:
+                  name: company
+                  value: CEA MODAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: REDE3
+              - column:
+                  name: company
+                  value: REDE ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PARD3
+              - column:
+                  name: company
+                  value: INSTITUTO HERMES PARDINI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FESA3
+              - column:
+                  name: company
+                  value: FERBASA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FIQE3
+              - column:
+                  name: company
+                  value: Unifique
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RDOR3
+              - column:
+                  name: company
+                  value: REDE D'OR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPLE5
+              - column:
+                  name: company
+                  value: COPEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DEXP3
+              - column:
+                  name: company
+                  value: DEXXOS PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NGRD3
+              - column:
+                  name: company
+                  value: NEOGRID PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HBRE3
+              - column:
+                  name: company
+                  value: HBR REALTY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DMMO3
+              - column:
+                  name: company
+                  value: DOMMO ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRFB3
+              - column:
+                  name: company
+                  value: Atacadão  Carrefour
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PFRM3
+              - column:
+                  name: company
+                  value: PROFARMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GOLL4
+              - column:
+                  name: company
+                  value: GOL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CURY3
+              - column:
+                  name: company
+                  value: CURY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENEV3
+              - column:
+                  name: company
+                  value: ENEVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRML3
+              - column:
+                  name: company
+                  value: BR MALLS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VAMO3
+              - column:
+                  name: company
+                  value: Vamos
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CESP6
+              - column:
+                  name: company
+                  value: CESP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PLPL3
+              - column:
+                  name: company
+                  value: PLANO E PLANO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENGI3
+              - column:
+                  name: company
+                  value: ENERGISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TGMA3
+              - column:
+                  name: company
+                  value: TEGMA GESTÃO LOGÍSTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: USIM6
+              - column:
+                  name: company
+                  value: USIMINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HBOR3
+              - column:
+                  name: company
+                  value: HELBOR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMEB4
+              - column:
+                  name: company
+                  value: BANCO MERCANTIL DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CGAS5
+              - column:
+                  name: company
+                  value: COMGÁS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VLID3
+              - column:
+                  name: company
+                  value: VALID
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PTNT4
+              - column:
+                  name: company
+                  value: PETTENATI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MELK3
+              - column:
+                  name: company
+                  value: MELNICK
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALLD3
+              - column:
+                  name: company
+                  value: ALLIED
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRBI11
+              - column:
+                  name: company
+                  value: BR PARTNERS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PNVL3
+              - column:
+                  name: company
+                  value: DIMED
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: POMO3
+              - column:
+                  name: company
+                  value: MARCOPOLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HGTX3
+              - column:
+                  name: company
+                  value: HERING
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ECOR3
+              - column:
+                  name: company
+                  value: ECORODOVIAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PINE4
+              - column:
+                  name: company
+                  value: BANCO PINE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEBR6
+              - column:
+                  name: company
+                  value: CEB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BLAU3
+              - column:
+                  name: company
+                  value: Blau Farmacêutica
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LAME4
+              - column:
+                  name: company
+                  value: LOJAS AMERICANAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAC5
+              - column:
+                  name: company
+                  value: BANCO BTG PACTUAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CGRA3
+              - column:
+                  name: company
+                  value: GRAZZIOTIN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRKM6
+              - column:
+                  name: company
+                  value: BRASKEM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ELPL3
+              - column:
+                  name: company
+                  value: ENEL  ELETROPAULO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SMLS3
+              - column:
+                  name: company
+                  value: SMILES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CPRE3
+              - column:
+                  name: company
+                  value: CPFL ENERGIAS RENOVÁVEIS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AMAR3
+              - column:
+                  name: company
+                  value: LOJAS MARISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EEEL3
+              - column:
+                  name: company
+                  value: CEEEGT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMOB3
+              - column:
+                  name: company
+                  value: BEMOBI MOBILE TECH
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SOND6
+              - column:
+                  name: company
+                  value: SONDOTECNICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BIDI3
+              - column:
+                  name: company
+                  value: Banco Inter
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TPIS3
+              - column:
+                  name: company
+                  value: TPI  TRIUNFO PARTICIP. E INVEST. S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SULA4
+              - column:
+                  name: company
+                  value: SUL AMÉRICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PEAB3
+              - column:
+                  name: company
+                  value: CIA PARTICIPAÇÕES ALIANÇA DA BAHIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MILS3
+              - column:
+                  name: company
+                  value: MILLS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BALM3
+              - column:
+                  name: company
+                  value: BAUMER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EUCA4
+              - column:
+                  name: company
+                  value: EUCATEX
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TEND3
+              - column:
+                  name: company
+                  value: CONSTRUTORA TENDA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AFLT3
+              - column:
+                  name: company
+                  value: AFLUENTE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IFCM3
+              - column:
+                  name: company
+                  value: Infracommerce
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRIT3
+              - column:
+                  name: company
+                  value: Brisanet
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ELET5
+              - column:
+                  name: company
+                  value: ELETROBRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TIET4
+              - column:
+                  name: company
+                  value: AES TIETE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: YDUQ3
+              - column:
+                  name: company
+                  value: YDUQS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GFSA3
+              - column:
+                  name: company
+                  value: GAFISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BIDI11
+              - column:
+                  name: company
+                  value: Banco Inter
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SBFG3
+              - column:
+                  name: company
+                  value: CENTAURO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALPA4
+              - column:
+                  name: company
+                  value: ALPARGATAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRPG6
+              - column:
+                  name: company
+                  value: TRONOX PIGMENTOS DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PRNR3
+              - column:
+                  name: company
+                  value: PRINER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAC3
+              - column:
+                  name: company
+                  value: BANCO BTG PACTUAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OFSA3
+              - column:
+                  name: company
+                  value: OURO FINO SAÚDE ANIMAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RNEW4
+              - column:
+                  name: company
+                  value: RENOVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VIVR3
+              - column:
+                  name: company
+                  value: VIVER INCORPORADORA E CONSTRUTORA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRSR5
+              - column:
+                  name: company
+                  value: BANCO BANRISUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LUPA3
+              - column:
+                  name: company
+                  value: LUPATECH
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WHRL3
+              - column:
+                  name: company
+                  value: WHIRLPOOL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WHRL3
+              - column:
+                  name: company
+                  value: WHIRLPOOL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SEQL3
+              - column:
+                  name: company
+                  value: SEQUOIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JSLG3
+              - column:
+                  name: company
+                  value: JSL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENMT4
+              - column:
+                  name: company
+                  value: ENERGISA MATO GROSSO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GUAR3
+              - column:
+                  name: company
+                  value: GUARARAPES CONFECÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MEAL3
+              - column:
+                  name: company
+                  value: INTERNATIONAL MEAL COMPANY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ZAMP3
+              - column:
+                  name: company
+                  value: ZAMP S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MEGA3
+              - column:
+                  name: company
+                  value: OMEGA GERAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HBSA3
+              - column:
+                  name: company
+                  value: HIDROVIAS DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGTA3
+              - column:
+                  name: company
+                  value: IGUATEMI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HVAN3
+              - column:
+                  name: company
+                  value: HAVAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: UCAS3
+              - column:
+                  name: company
+                  value: UNICASA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WLMM3
+              - column:
+                  name: company
+                  value: WLM INDÚSTRIA E COMÉRCIO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAR3
+              - column:
+                  name: company
+                  value: BANCO BANPARA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LJQQ3
+              - column:
+                  name: company
+                  value: LOJAS QUEROQUERO S/A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TKNO4
+              - column:
+                  name: company
+                  value: TEKNO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SEER3
+              - column:
+                  name: company
+                  value: SER EDUCACIONAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ANIM3
+              - column:
+                  name: company
+                  value: ANIMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BOAS3
+              - column:
+                  name: company
+                  value: BOA VISTA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LCAM3
+              - column:
+                  name: company
+                  value: LOCAMERICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GNDI3
+              - column:
+                  name: company
+                  value: Notre Dame Intermédica
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LOGN3
+              - column:
+                  name: company
+                  value: LOGIN LOGÍSTICA INTERMODAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENJU3
+              - column:
+                  name: company
+                  value: ENJOEI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CAMB3
+              - column:
+                  name: company
+                  value: CAMBUCI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LAME3
+              - column:
+                  name: company
+                  value: LOJAS AMERICANAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CBEE3
+              - column:
+                  name: company
+                  value: AMPLA ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TIET3
+              - column:
+                  name: company
+                  value: AES TIETE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BALM4
+              - column:
+                  name: company
+                  value: BAUMER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GEPA4
+              - column:
+                  name: company
+                  value: RIO PARANAPANEMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PCAR4
+              - column:
+                  name: company
+                  value: Grupo Pão de Açúcar
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RPMG3
+              - column:
+                  name: company
+                  value: PET MANGUINHOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ODER3
+              - column:
+                  name: company
+                  value: CONSERVAS ODERICH
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMKS3
+              - column:
+                  name: company
+                  value: BICICLETAS MONARK
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CLSC3
+              - column:
+                  name: company
+                  value: CELESC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SOMA3
+              - column:
+                  name: company
+                  value: GRUPO SOMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TCSA3
+              - column:
+                  name: company
+                  value: TECNISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BTOW3
+              - column:
+                  name: company
+                  value: B2W DIGITAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NEMO5
+              - column:
+                  name: company
+                  value: SUZANO HOLDING
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AGXY3
+              - column:
+                  name: company
+                  value: Agrogalaxy
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ATOM3
+              - column:
+                  name: company
+                  value: ATOM EMPREENDIMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ATMP3
+              - column:
+                  name: company
+                  value: ATMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VITT3
+              - column:
+                  name: company
+                  value: Vittia
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ATOM3
+              - column:
+                  name: company
+                  value: ATOM EMPREENDIMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PORT3
+              - column:
+                  name: company
+                  value: WILSON SONS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LVTC3
+              - column:
+                  name: company
+                  value: Livetech da Bahia
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: COCE6
+              - column:
+                  name: company
+                  value: COELCE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RCSL4
+              - column:
+                  name: company
+                  value: RECRUSUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ESPA3
+              - column:
+                  name: company
+                  value: Espaçolaser
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CESP3
+              - column:
+                  name: company
+                  value: CESP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: COCE5
+              - column:
+                  name: company
+                  value: COELCE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRPR3
+              - column:
+                  name: company
+                  value: BR PROPERTIES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RAIZ3
+              - column:
+                  name: company
+                  value: Raízen
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DASA3
+              - column:
+                  name: company
+                  value: DASA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DMVF3
+              - column:
+                  name: company
+                  value: D1000 VAREJO FARMA PARTICIPAÇÕES S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SLED4
+              - column:
+                  name: company
+                  value: SARAIVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGTI3
+              - column:
+                  name: company
+                  value: JEREISSATI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PDGR3
+              - column:
+                  name: company
+                  value: PDG REALTY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EMAE4
+              - column:
+                  name: company
+                  value: EMAE  EMPRESA METROP.AGUAS ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HBTS5
+              - column:
+                  name: company
+                  value: HABITASUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GETT11
+              - column:
+                  name: company
+                  value: GETNET
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PATI3
+              - column:
+                  name: company
+                  value: PANATLANTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSAB4
+              - column:
+                  name: company
+                  value: CIA SEGUROS ALIANÇA DA BAHIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MOSI3
+              - column:
+                  name: company
+                  value: MOSAICO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MRSA3B
+              - column:
+                  name: company
+                  value: MRS LOGÍSTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EEEL4
+              - column:
+                  name: company
+                  value: CEEEGT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MERC4
+              - column:
+                  name: company
+                  value: MERCANTIL DO BRASIL FINANCEIRA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSRN6
+              - column:
+                  name: company
+                  value: COSERN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DOHL4
+              - column:
+                  name: company
+                  value: DOHLER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SHOW3
+              - column:
+                  name: company
+                  value: TIME FOR FUN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OPCT3
+              - column:
+                  name: company
+                  value: OceanPact
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRIV3
+              - column:
+                  name: company
+                  value: BANCO ALFA DE INVESTIMENTO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BSLI3
+              - column:
+                  name: company
+                  value: BRB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: INEP4
+              - column:
+                  name: company
+                  value: INEPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LPSB3
+              - column:
+                  name: company
+                  value: LOPES BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CATA3
+              - column:
+                  name: company
+                  value: CIA INDUSTRIAL CATAGUASES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LINX3
+              - column:
+                  name: company
+                  value: LINX
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SULA3
+              - column:
+                  name: company
+                  value: SUL AMÉRICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: G2DI33
+              - column:
+                  name: company
+                  value: G2D INVESTMENTS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALPA3
+              - column:
+                  name: company
+                  value: ALPARGATAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LTEL3B
+              - column:
+                  name: company
+                  value: LITEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LTEL3B
+              - column:
+                  name: company
+                  value: LITEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SMFT3
+              - column:
+                  name: company
+                  value: SMARTFIT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMEB3
+              - column:
+                  name: company
+                  value: BANCO MERCANTIL DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AZEV4
+              - column:
+                  name: company
+                  value: AZEVEDO E TRAVASSOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TFCO4
+              - column:
+                  name: company
+                  value: TRACK E FIELD
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RSUL4
+              - column:
+                  name: company
+                  value: RIOSULENSE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGTI11
+              - column:
+                  name: company
+                  value: JEREISSATI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEBR5
+              - column:
+                  name: company
+                  value: CEB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LAND3
+              - column:
+                  name: company
+                  value: TERRA SANTA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEEB5
+              - column:
+                  name: company
+                  value: COELBA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALPK3
+              - column:
+                  name: company
+                  value: ALLPARK EMPREENDIMENTOS PARTICIPACOES SERVICOS S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTNM4
+              - column:
+                  name: company
+                  value: COTEMINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRIV3
+              - column:
+                  name: company
+                  value: FINANCEIRA ALFA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MMXM3
+              - column:
+                  name: company
+                  value: MMX MINERAÇÃO E METÁLICOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NUTR3
+              - column:
+                  name: company
+                  value: NUTRIPLANT
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CASN3
+              - column:
+                  name: company
+                  value: CASAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MNPR3
+              - column:
+                  name: company
+                  value: MINUPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BOBR4
+              - column:
+                  name: company
+                  value: BOMBRIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VSPT3
+              - column:
+                  name: company
+                  value: FERROVIA CENTROATLÂNTICA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RSUL3
+              - column:
+                  name: company
+                  value: RIOSULENSE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE3
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRIV4
+              - column:
+                  name: company
+                  value: BANCO ALFA DE INVESTIMENTO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BDLL4
+              - column:
+                  name: company
+                  value: BARDELLA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TESA3
+              - column:
+                  name: company
+                  value: TERRA SANTA AGRO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EALT3
+              - column:
+                  name: company
+                  value: ELECTRO ACO ALTONA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEPE3
+              - column:
+                  name: company
+                  value: CELPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSRN5
+              - column:
+                  name: company
+                  value: COSERN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DEXP4
+              - column:
+                  name: company
+                  value: DEXXOS PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSED3
+              - column:
+                  name: company
+                  value: CRUZEIRO DO SUL EDUCACIONAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DMMO11
+              - column:
+                  name: company
+                  value: DOMMO ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PEAB4
+              - column:
+                  name: company
+                  value: CIA PARTICIPAÇÕES ALIANÇA DA BAHIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ORVR3
+              - column:
+                  name: company
+                  value: Orizon
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRPG3
+              - column:
+                  name: company
+                  value: TRONOX PIGMENTOS DO BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VSTE3
+              - column:
+                  name: company
+                  value: RESTOQUE COMÉRCIO E CONFECÇÕES DE ROUPAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HAGA4
+              - column:
+                  name: company
+                  value: HAGA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEGR3
+              - column:
+                  name: company
+                  value: CEG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: POWE3
+              - column:
+                  name: company
+                  value: FOCUS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BSLI4
+              - column:
+                  name: company
+                  value: BRB
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEED3
+              - column:
+                  name: company
+                  value: CEEED
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AALR3
+              - column:
+                  name: company
+                  value: ALLIAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MODL3
+              - column:
+                  name: company
+                  value: Modal Mais
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: APER3
+              - column:
+                  name: company
+                  value: ALPER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RDNI3
+              - column:
+                  name: company
+                  value: RNI NEGÓCIOS IMOBILIÁRIOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AALR3
+              - column:
+                  name: company
+                  value: ALLIAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ELMD3
+              - column:
+                  name: company
+                  value: Eletromidia
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMIN4
+              - column:
+                  name: company
+                  value: BANCO MERCANTIL DE INVESTIMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGBR3
+              - column:
+                  name: company
+                  value: IGB ELETRÔNICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FRIO3
+              - column:
+                  name: company
+                  value: METALFRIO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTSA3
+              - column:
+                  name: company
+                  value: SANTANENSE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ONCO3
+              - column:
+                  name: company
+                  value: Oncoclínicas
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RCSL3
+              - column:
+                  name: company
+                  value: RECRUSUL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GGPS3
+              - column:
+                  name: company
+                  value: Grupo GPS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AVLL3
+              - column:
+                  name: company
+                  value: ALPHAVILLE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MPLU3
+              - column:
+                  name: company
+                  value: MPLU3
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EQPA5
+              - column:
+                  name: company
+                  value: EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JFEN3
+              - column:
+                  name: company
+                  value: JOÃO FORTES ENGENHARIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MWET4
+              - column:
+                  name: company
+                  value: WETZEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DESK3
+              - column:
+                  name: company
+                  value: Desktop
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ARML3
+              - column:
+                  name: company
+                  value: Armac
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PDTC3
+              - column:
+                  name: company
+                  value: PADTEC HOLDING S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MBLY3
+              - column:
+                  name: company
+                  value: Mobly
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: INEP3
+              - column:
+                  name: company
+                  value: INEPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BIOM3
+              - column:
+                  name: company
+                  value: BIOMM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GETT4
+              - column:
+                  name: company
+                  value: GETNET
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RSID3
+              - column:
+                  name: company
+                  value: ROSSI RESIDENCIAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EQPA6
+              - column:
+                  name: company
+                  value: EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SOND5
+              - column:
+                  name: company
+                  value: SONDOTECNICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MODL11
+              - column:
+                  name: company
+                  value: Modal Mais
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: COCE3
+              - column:
+                  name: company
+                  value: COELCE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GEPA3
+              - column:
+                  name: company
+                  value: RIO PARANAPANEMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SGPS3
+              - column:
+                  name: company
+                  value: SPRINGS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FRTA3
+              - column:
+                  name: company
+                  value: POMIFRUTAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ODER4
+              - column:
+                  name: company
+                  value: CONSERVAS ODERICH
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SOND3
+              - column:
+                  name: company
+                  value: SONDOTECNICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENMA3B
+              - column:
+                  name: company
+                  value: CEMAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MATD3
+              - column:
+                  name: company
+                  value: Hospital Mater Dei
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TCNO4
+              - column:
+                  name: company
+                  value: TECNOSOLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MOAR3
+              - column:
+                  name: company
+                  value: MONTEIRO ARANHA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTSA3
+              - column:
+                  name: company
+                  value: METISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JOPA3
+              - column:
+                  name: company
+                  value: JOSAPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TCNO4
+              - column:
+                  name: company
+                  value: TECNOSOLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MOAR3
+              - column:
+                  name: company
+                  value: MONTEIRO ARANHA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTSA3
+              - column:
+                  name: company
+                  value: METISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CLSA3
+              - column:
+                  name: company
+                  value: Clear Sale
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: KRSA3
+              - column:
+                  name: company
+                  value: Kora Saúde
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EQPA7
+              - column:
+                  name: company
+                  value: EQUATORIAL PARA DISTRIBUIDORA DE ENERGIA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SCAR3
+              - column:
+                  name: company
+                  value: SÃO CARLOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LUXM4
+              - column:
+                  name: company
+                  value: TREVISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE11
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NISS3
+              - column:
+                  name: company
+                  value: NISSEI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TELB3
+              - column:
+                  name: company
+                  value: TELEBRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TCNO3
+              - column:
+                  name: company
+                  value: TECNOSOLO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EMAE3
+              - column:
+                  name: company
+                  value: EMAE  EMPRESA METROP.AGUAS ENERGIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WEST3
+              - column:
+                  name: company
+                  value: Westwing
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: EPAR3
+              - column:
+                  name: company
+                  value: EMBPAR PARTICIPACOES S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ESTR4
+              - column:
+                  name: company
+                  value: ESTRELA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEPE5
+              - column:
+                  name: company
+                  value: CELPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PATI4
+              - column:
+                  name: company
+                  value: PANATLANTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ECPR3
+              - column:
+                  name: company
+                  value: ENCORPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRQB3
+              - column:
+                  name: company
+                  value: BRQ
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTSA4
+              - column:
+                  name: company
+                  value: SANTANENSE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GETT3
+              - column:
+                  name: company
+                  value: GETNET
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TELB4
+              - column:
+                  name: company
+                  value: TELEBRAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RNEW11
+              - column:
+                  name: company
+                  value: RENOVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CALI4
+              - column:
+                  name: company
+                  value: CONSTRUTORA ADOLPHO LINDENBERG
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBRK3
+              - column:
+                  name: company
+                  value: BRASIL BROKERS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MNDL3
+              - column:
+                  name: company
+                  value: MUNDIAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PPLA11
+              - column:
+                  name: company
+                  value: PPLA PARTICIPATIONS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BGIP3
+              - column:
+                  name: company
+                  value: BANCO BANESE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGSN3
+              - column:
+                  name: company
+                  value: IGUA SANEAMENTO S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WLMM4
+              - column:
+                  name: company
+                  value: WLM INDÚSTRIA E COMÉRCIO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BAUH3
+              - column:
+                  name: company
+                  value: EXCELSIOR ALIMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PTNT3
+              - column:
+                  name: company
+                  value: PETTENATI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CESP5
+              - column:
+                  name: company
+                  value: CESP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSAB3
+              - column:
+                  name: company
+                  value: CIA SEGUROS ALIANÇA DA BAHIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITEC3
+              - column:
+                  name: company
+                  value: ITAUTEC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CASN4
+              - column:
+                  name: company
+                  value: CASAN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SNSY3
+              - column:
+                  name: company
+                  value: SANSUY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEPE6
+              - column:
+                  name: company
+                  value: CELPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PLAS3
+              - column:
+                  name: company
+                  value: PLASCAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CSAB3
+              - column:
+                  name: company
+                  value: CIA SEGUROS ALIANÇA DA BAHIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ITEC3
+              - column:
+                  name: company
+                  value: ITAUTEC
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RPAD3
+              - column:
+                  name: company
+                  value: ALFA HOLDINGS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HOOT4
+              - column:
+                  name: company
+                  value: HOTÉIS OTHON
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPHA3
+              - column:
+                  name: company
+                  value: BRASIL PHARMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: QUSW3
+              - column:
+                  name: company
+                  value: QUALITY SOFTWARE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: WNBR3
+              - column:
+                  name: company
+                  value: WINE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: APTI4
+              - column:
+                  name: company
+                  value: SIDERURGICA J. L. ALIPERTI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GRAO3
+              - column:
+                  name: company
+                  value: Agribrasil
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTIG3
+              - column:
+                  name: company
+                  value: METALGRÁFICA IGUAÇU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NEXP3
+              - column:
+                  name: company
+                  value: NEXPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FIGE3
+              - column:
+                  name: company
+                  value: INVESTIMENTOS BEMGE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEEB6
+              - column:
+                  name: company
+                  value: COELBA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SLED3
+              - column:
+                  name: company
+                  value: SARAIVA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TEKA4
+              - column:
+                  name: company
+                  value: TEKA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MDRO3
+              - column:
+                  name: company
+                  value: Madero
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENMT3
+              - column:
+                  name: company
+                  value: ENERGISA MATO GROSSO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HAGA3
+              - column:
+                  name: company
+                  value: HAGA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: STKF3
+              - column:
+                  name: company
+                  value: STATKRAFT ENERGIAS RENOVÁVEIS S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MMAQ4
+              - column:
+                  name: company
+                  value: MINASMAQUINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRIV4
+              - column:
+                  name: company
+                  value: FINANCEIRA ALFA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DOTZ3
+              - column:
+                  name: company
+                  value: Dotz
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VVEO3
+              - column:
+                  name: company
+                  value: CM HOSPITALAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GSHP3
+              - column:
+                  name: company
+                  value: GENERAL SHOPPING
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEDO3
+              - column:
+                  name: company
+                  value: CEDRO TÊXTIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BBML3
+              - column:
+                  name: company
+                  value: BBM LOGÍSTICA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ANDG3B
+              - column:
+                  name: company
+                  value: ANDRADE GUTIERREZ CONCESSÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMSA3
+              - column:
+                  name: company
+                  value: CIMS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TXRX4
+              - column:
+                  name: company
+                  value: RENAUXVIEW
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEDO4
+              - column:
+                  name: company
+                  value: CEDRO TÊXTIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NORD3
+              - column:
+                  name: company
+                  value: NORDON INDUSTRIAS METALÚRGICAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NINJ3
+              - column:
+                  name: company
+                  value: GetNinjas
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: INNT3
+              - column:
+                  name: company
+                  value: INTER CONSTRUTORA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OSXB3
+              - column:
+                  name: company
+                  value: OSX BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LUXM3
+              - column:
+                  name: company
+                  value: TREVISA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PNVL4
+              - column:
+                  name: company
+                  value: DIMED
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BMIN3
+              - column:
+                  name: company
+                  value: BANCO MERCANTIL DE INVESTIMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: STTR3
+              - column:
+                  name: company
+                  value: STARA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MMAQ3
+              - column:
+                  name: company
+                  value: MINASMAQUINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IDVL4
+              - column:
+                  name: company
+                  value: BANCO INDUSVAL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NAFG3
+              - column:
+                  name: company
+                  value: NADIR FIGUEIREDO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BLUT3
+              - column:
+                  name: company
+                  value: BLUE TECH SOLUTIONS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TKNO3
+              - column:
+                  name: company
+                  value: TEKNO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OSXB3
+              - column:
+                  name: company
+                  value: OSX BRASIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NAFG4
+              - column:
+                  name: company
+                  value: NADIR FIGUEIREDO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BLUT4
+              - column:
+                  name: company
+                  value: BLUE TECH SOLUTIONS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE8
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HETA4
+              - column:
+                  name: company
+                  value: HERCULES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: QVQP3B
+              - column:
+                  name: company
+                  value: 524 PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AHEB3
+              - column:
+                  name: company
+                  value: SÃO PAULO TURISMO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MRSA5B
+              - column:
+                  name: company
+                  value: MRS LOGÍSTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MSPA4
+              - column:
+                  name: company
+                  value: MELHORAMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTNM3
+              - column:
+                  name: company
+                  value: COTEMINAS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PTCA3
+              - column:
+                  name: company
+                  value: PRATICA KLIMAQUIP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: JOPA4
+              - column:
+                  name: company
+                  value: JOSAPAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MRSA6B
+              - column:
+                  name: company
+                  value: MRS LOGÍSTICA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE5
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PCBU3
+              - column:
+                  name: company
+                  value: PACAEMBU CONSTRUTORA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DTCY3
+              - column:
+                  name: company
+                  value: DTCOM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: NEMO6
+              - column:
+                  name: company
+                  value: SUZANO HOLDING
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTKA4
+              - column:
+                  name: company
+                  value: KARSTEN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MODL4
+              - column:
+                  name: company
+                  value: Modal Mais
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ESTR3
+              - column:
+                  name: company
+                  value: ESTRELA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MSRO3
+              - column:
+                  name: company
+                  value: MAESTRO LOCADORA DE VEICULOS S.A
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CEED4
+              - column:
+                  name: company
+                  value: CEEED
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CRDE3
+              - column:
+                  name: company
+                  value: CR2 Empreendimentos
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RIOS3
+              - column:
+                  name: company
+                  value: Rio Alto
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RPAD6
+              - column:
+                  name: company
+                  value: ALFA HOLDINGS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CORR4
+              - column:
+                  name: company
+                  value: CORREA RIBEIRO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: VSPT4
+              - column:
+                  name: company
+                  value: FERROVIA CENTROATLÂNTICA S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: OGXP3
+              - column:
+                  name: company
+                  value: ÓLEO E GÁS PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CAMB4
+              - column:
+                  name: company
+                  value: CAMBUCI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: IGTI4
+              - column:
+                  name: company
+                  value: JEREISSATI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BAHI3
+              - column:
+                  name: company
+                  value: BAHEMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALTF3
+              - column:
+                  name: company
+                  value: Althaia
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PPAR3
+              - column:
+                  name: company
+                  value: POLPAR S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAT33
+              - column:
+                  name: company
+                  value: BANCO PATAGONIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SEDU3
+              - column:
+                  name: company
+                  value: SOMOS EDUCAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CATA4
+              - column:
+                  name: company
+                  value: CIA INDUSTRIAL CATAGUASES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TXRX3
+              - column:
+                  name: company
+                  value: RENAUXVIEW
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FLEX3
+              - column:
+                  name: company
+                  value: FLEX RELACIONAMENTOS INTELIGENTES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PTCA11
+              - column:
+                  name: company
+                  value: PRATICA KLIMAQUIP
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BOBR3
+              - column:
+                  name: company
+                  value: BOMBRIL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GBIO33
+              - column:
+                  name: company
+                  value: BIOTOSCANA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRBI3
+              - column:
+                  name: company
+                  value: BR PARTNERS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CREM3
+              - column:
+                  name: company
+                  value: CREMER
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE7
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AHEB6
+              - column:
+                  name: company
+                  value: SÃO PAULO TURISMO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MAPT3
+              - column:
+                  name: company
+                  value: CEMEPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SPRT3B
+              - column:
+                  name: company
+                  value: LONGDIS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GUAR4
+              - column:
+                  name: company
+                  value: GUARARAPES CONFECÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: DTCY4
+              - column:
+                  name: company
+                  value: DTCOM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRBI4
+              - column:
+                  name: company
+                  value: BR PARTNERS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CNSY3
+              - column:
+                  name: company
+                  value: CINESYSTEM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BRGE6
+              - column:
+                  name: company
+                  value: CONSÓRCIO ALFA DE ADMINISTRAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: APTI3
+              - column:
+                  name: company
+                  value: SIDERURGICA J. L. ALIPERTI
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SNSY5
+              - column:
+                  name: company
+                  value: SANSUY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PINE3
+              - column:
+                  name: company
+                  value: BANCO PINE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FBMC4
+              - column:
+                  name: company
+                  value: FIBAM
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: GENT3
+              - column:
+                  name: company
+                  value: LG Informática
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BAHI3
+              - column:
+                  name: company
+                  value: BAHEMA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MSPA3
+              - column:
+                  name: company
+                  value: MELHORAMENTOS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ALTF3
+              - column:
+                  name: company
+                  value: Althaia
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: PPAR3
+              - column:
+                  name: company
+                  value: POLPAR S.A.
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BPAT33
+              - column:
+                  name: company
+                  value: BANCO PATAGONIA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SEDU3
+              - column:
+                  name: company
+                  value: SOMOS EDUCAÇÃO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CATA4
+              - column:
+                  name: company
+                  value: CIA INDUSTRIAL CATAGUASES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTKA3
+              - column:
+                  name: company
+                  value: KARSTEN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BFFT3
+              - column:
+                  name: company
+                  value: Bluefit
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENMA6B
+              - column:
+                  name: company
+                  value: CEMAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TOYB3
+              - column:
+                  name: company
+                  value: TEC TOY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HCAR3
+              - column:
+                  name: company
+                  value: Hospital Care
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: AHEB5
+              - column:
+                  name: company
+                  value: SÃO PAULO TURISMO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TEKA3
+              - column:
+                  name: company
+                  value: TEKA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LIQO3
+              - column:
+                  name: company
+                  value: LIQ PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TOYB4
+              - column:
+                  name: company
+                  value: TEC TOY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTIG4
+              - column:
+                  name: company
+                  value: METALGRÁFICA IGUAÇU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMSA4
+              - column:
+                  name: company
+                  value: CIMS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FIGE4
+              - column:
+                  name: company
+                  value: INVESTIMENTOS BEMGE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MGEL3
+              - column:
+                  name: company
+                  value: MANGELS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ICBR3
+              - column:
+                  name: company
+                  value: Intercement
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FTRT3B
+              - column:
+                  name: company
+                  value: FUTURETEL
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TEKA3
+              - column:
+                  name: company
+                  value: TEKA
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: RPAD5
+              - column:
+                  name: company
+                  value: ALFA HOLDINGS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MTIG4
+              - column:
+                  name: company
+                  value: METALGRÁFICA IGUAÇU
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CMSA4
+              - column:
+                  name: company
+                  value: CIMS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTKA3
+              - column:
+                  name: company
+                  value: KARSTEN
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: FIGE4
+              - column:
+                  name: company
+                  value: INVESTIMENTOS BEMGE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CCXC3
+              - column:
+                  name: company
+                  value: CCX
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: BFFT3
+              - column:
+                  name: company
+                  value: Bluefit
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CORR3
+              - column:
+                  name: company
+                  value: CORREA RIBEIRO
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: ENMA6B
+              - column:
+                  name: company
+                  value: CEMAR
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TOYB3
+              - column:
+                  name: company
+                  value: TEC TOY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HCAR3
+              - column:
+                  name: company
+                  value: Hospital Care
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MAPT4
+              - column:
+                  name: company
+                  value: CEMEPE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: HETA3
+              - column:
+                  name: company
+                  value: HERCULES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: CTSA8
+              - column:
+                  name: company
+                  value: SANTANENSE
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: LIQO3
+              - column:
+                  name: company
+                  value: LIQ PARTICIPAÇÕES
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MGEL3
+              - column:
+                  name: company
+                  value: MANGELS
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: SNSY6
+              - column:
+                  name: company
+                  value: SANSUY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: TOYB4
+              - column:
+                  name: company
+                  value: TEC TOY
+        - insert:
+            tableName: stock
+            columns:
+              - column:
+                  name: name
+                  value: MWET3
+              - column:
+                  name: company
+                  value: WETZEL

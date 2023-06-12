@@ -1,0 +1,75 @@
+databaseChangeLog:
+  -  changeSet:
+      id: createTableStockIndicator
+      author: Gabriel-Balestrin
+      changes:
+        - createTable:
+            tableName: stock_indicator
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: stock_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_si_stock_id
+                    references: stock(id)
+              - column:
+                  name: indicator_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_si_indicator_id
+                    references: indicator(id)
+              - column:
+                  name: value_number
+                  type: FLOAT
+                  constraints:
+                    nullable: true
+              - column:
+                  name: value_string
+                  type: VARCHAR(100)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: date_time_create
+                  type: DATETIME
+                  constraints:
+                    nullable: false
+              - column:
+                  name: local_info
+                  type: VARCHAR(250)
+                  constraints:
+                    nullable: false
+  -  changeSet:
+       id:  createIndex-TableStockIndicator-stock_id
+       author:  Gabriel-Balestrin
+       changes:
+         - createIndex:
+             clustered:  true
+             columns:
+               - column:
+                   descending:  true
+                   name:  stock_id
+             indexName:  idx_si_stock_id
+             schemaName:  public
+             tableName:  stock_indicator
+  -  changeSet:
+       id:  createIndex-TableStockIndicator-indicator_id
+       author:  Gabriel-Balestrin
+       changes:
+         - createIndex:
+             clustered:  true
+             columns:
+               - column:
+                   descending:  true
+                   name:  indicator_id
+             indexName:  idx_si_indicator_id
+             schemaName:  public
+             tableName:  stock_indicator
