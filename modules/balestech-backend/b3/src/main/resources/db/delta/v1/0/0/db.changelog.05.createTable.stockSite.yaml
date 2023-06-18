@@ -1,10 +1,10 @@
 databaseChangeLog:
   -  changeSet:
-      id: createTableStock
+      id: createTableStockSite
       author: Gabriel-Balestrin
       changes:
         - createTable:
-            tableName: stock
+            tableName: stock_site
             columns:
               - column:
                   name: id
@@ -14,26 +14,19 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: name
+                  name: stock_name
                   type: VARCHAR(10)
                   constraints:
                     nullable: false
+                    foreignKeyName: fk_ss_stock_name
+                    references: stock(name)
               - column:
-                  name: company
+                  name: site
                   type: VARCHAR(255)
                   constraints:
                     nullable: false
               - column:
-                  name: status
-                  type: VARCHAR(10)
+                  name: path
+                  type: VARCHAR(1000)
                   constraints:
                     nullable: false
-  -  changeSet:
-       id:  addUniqueConstraint-uk-s-name
-       author:  Gabriel Balestrin
-       changes:
-         -  addUniqueConstraint:
-              tableName:  stock
-              columnNames:  name
-              constraintName:  uk_s_name
-              schemaName:  public

@@ -16,4 +16,5 @@ public class Stock {
     private BigInteger id;
     private String name;
     private String company;
+    private String status;
 }

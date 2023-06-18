@@ -94,6 +94,14 @@
 			<version>4.22.0</version>
 		</dependency>
 
+		<!--
+		  - Permite utilizar o WebClient
+	     -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>4.10.0</version>
+		</dependency>
 
 
 
