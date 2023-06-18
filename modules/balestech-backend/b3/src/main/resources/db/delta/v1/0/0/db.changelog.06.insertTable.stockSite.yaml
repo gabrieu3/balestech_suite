@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - changeSet:
+      id: insertDataStockSite
+      author: Gabriel-Balestrin
+      changes:
+        - insert:
+            tableName: stock_site
+            columns:
+              - column:
+                  name: stock_name
+                  value: CIEL3
+              - column:
+                  name: site
+                  value: Investing
+              - column:
+                  name: path
+                  value: https://br.investing.com/equities/cielo-on-nm

@@ -24,10 +24,22 @@ databaseChangeLog:
                                   from stock_indicator si
                                   where si.indicator_id = 3
                                     and si.stock_id = s.id
+                                    and si.local_info = 'https://br.tradingview.com'
                                     and si.date_time_create = (select max(si2.date_time_create)
                                                                from stock_indicator si2
                                                                where si2.indicator_id = si.indicator_id
-                                                               and si2.stock_id = si.stock_id) ) target,
+                                                               and si2.stock_id = si.stock_id
+                                                               and si2.local_info = si.local_info) ) target_tradingview,
+                                (select si.value_number
+                                  from stock_indicator si
+                                  where si.indicator_id = 3
+                                    and si.stock_id = s.id
+                                    and si.local_info = 'https://content.btgpactual.com'
+                                    and si.date_time_create = (select max(si2.date_time_create)
+                                                                from stock_indicator si2
+                                                                where si2.indicator_id = si.indicator_id
+                                                                and si2.stock_id = si.stock_id
+                                                                and si2.local_info = si.local_info) ) target_btgpactual,              
                                 (select si.value_number
                                   from stock_indicator si
                                   where si.indicator_id = 2
@@ -35,7 +47,9 @@ databaseChangeLog:
                                     and si.date_time_create = (select max(si2.date_time_create)
                                                                from stock_indicator si2
                                                                where si2.indicator_id = si.indicator_id
-                                                               and si2.stock_id = si.stock_id)) volume
+                                                               and si2.stock_id = si.stock_id)) volume,
+                                s.status              
                           from stock s
+                            where s.status = 'ATIVO'
                           order by 4,1
             viewName: v_stock_indicator_data

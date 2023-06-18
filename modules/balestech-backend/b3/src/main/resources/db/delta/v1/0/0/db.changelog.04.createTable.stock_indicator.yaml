@@ -73,3 +73,35 @@ databaseChangeLog:
              indexName:  idx_si_indicator_id
              schemaName:  public
              tableName:  stock_indicator
+  -  changeSet:
+       id:  createIndex-TableStockIndicator-indicator_vsid1
+       author:  Gabriel-Balestrin
+       changes:
+         - createIndex:
+             columns:
+               - column:
+                   name:  indicator_id
+               - column:
+                   name:  stock_id
+               - column:
+                   name:  date_time_create
+             indexName:  idx_si_vsid_1
+             schemaName:  public
+             tableName:  stock_indicator
+  -  changeSet:
+       id:  createIndex-TableStockIndicator-indicator_vsid2
+       author:  Gabriel-Balestrin
+       changes:
+         - createIndex:
+             columns:
+               - column:
+                   name:  indicator_id
+               - column:
+                   name:  stock_id
+               - column:
+                   name:  date_time_create
+               - column:
+                   name:  local_info
+             indexName:  idx_si_vsid_2
+             schemaName:  public
+             tableName:  stock_indicator
