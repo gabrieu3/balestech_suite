@@ -1,0 +1,51 @@
+databaseChangeLog:
+  - changeSet:
+      id: dropViewStockIndicatorDataCompile
+      author: Gabriel Balestrin
+      changes:
+        - dropView:
+            viewName: v_stock_indicator_data_compile
+  - changeSet:
+      id: createViewStockIndicatorDataCompile
+      author: Gabriel Balestrin
+      runOnChange: true
+      changes:
+        - createView:
+            catalogName: cat
+            encoding: UTF-8
+            fullDefinition: false
+            remarks: View para analisar as ações e seus indicadores bem como calculos relacionados
+            replaceIfExists: true
+            dependsOnView: v_stock_indicator_data
+            schemaName: public
+            selectQuery: select v.name,
+                                v.company,
+                                case
+                                  when coalesce(v.price,0) = 0 then 0
+                                  else v.price
+                                end price,
+                                case
+                                  when coalesce(v.target_tradingview,0) = 0 then 0
+                                  else v.target_tradingview
+                                end target_tradingview,
+                                case
+                                  when coalesce(v.target_btgpactual,0) = 0 then 0
+                                  else v.target_btgpactual
+                                end target_btgpactual,
+                                case
+                                when coalesce(v.target_wsj,0) = 0 then 0
+                                when strpos(v.target_wsj_str, 'R$') > 0 then v.target_wsj
+                                else v.target_wsj * 4.8
+                              end  target_wsj,
+                              case
+                                when coalesce(v.target_xp,0) = 0 then 0
+                                else v.target_xp
+                              end target_xp,
+                              case
+                                when coalesce(v.volume,0) = 0 then 0
+                                else v.volume
+                              end  volume
+                          from v_stock_indicator_data v
+                          where v.status = 'ATIVO'
+                          order by 1
+            viewName: v_stock_indicator_data_compile

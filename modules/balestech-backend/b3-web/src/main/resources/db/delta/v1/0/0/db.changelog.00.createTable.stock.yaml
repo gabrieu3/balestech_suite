@@ -1,0 +1,25 @@
+databaseChangeLog:
+  -  changeSet:
+      id: createSystemConfig
+      author: Gabriel-Balestrin
+      changes:
+        - createTable:
+            tableName: system_config
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: config
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: on_off
+                  type: VARCHAR(1)
+                  constraints:
+                    nullable: false

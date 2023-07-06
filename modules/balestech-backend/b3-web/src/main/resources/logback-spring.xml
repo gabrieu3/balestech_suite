@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!--
+    - LOCAL GERA ARQUIVO
+    -->
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+
+    <!--
+    - LOCAL GERA ARQUIVO
+    -
+    - Define variável no windows:
+    - set LOG_DIR=C:\logs
+    -
+    - Define no Linux
+    - export LOG_DIR=/var/log
+    -->
+    <property name="LOGS" value="${LOG_DIR:-/logs}" />
+    <property name="LOG_FILE" value="${LOG_FILE:-balestech_b3}"/>
+
+    <!--
+    - CONFIGURA CONSOLE
+    -->
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%d{dd/MM/yyyy HH:mm:ss.SSS X}] [%-32mdc{traceId:----- traceId -----}] [%-33.-33thread] [%-5level] [%-70logger{70}] %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--
+    - CONFIGURA ARQUIVO
+    -->
+    <appender name="RollingFile" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/balestech_b3.log</file>
+        <encoder>
+            <pattern>[%d{dd/MM/yyyy HH:mm:ss.SSS X}] [%-32mdc{traceId:----- traceId -----}] [%-33.-33thread] [%-5level] [%-70logger{70}] %msg%n</pattern>
+        </encoder>
+
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- rollover daily and when the file reaches 10 MegaBytes -->
+            <fileNamePattern>${LOGS}/archived/balestech-%d{yyyy-MM-dd}.%i.log </fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10MB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+
+    <!--
+    - CONFIGURA LOGSTASH
+    -->
+    <appender name="Logstash" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOGS}/${LOG_FILE}.json</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOGS}/${LOG_FILE}.json.%d{yyyy-MM-dd}.gz</fileNamePattern>
+            <maxHistory>7</maxHistory>
+        </rollingPolicy>
+        <encoder class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <timestamp>
+                    <timeZone>UTC</timeZone>
+                </timestamp>
+                <pattern>
+                    <pattern>
+                        {
+                        "severity": "%level",
+                        "service": "${springAppName:-}",
+                        "trace": "%X{X-B3-TraceId:-}",
+                        "span": "%X{X-B3-SpanId:-}",
+                        "parent": "%X{X-B3-ParentSpanId:-}",
+                        "exportable": "%X{X-Span-Export:-}",
+                        "pid": "${PID:-}",
+                        "thread": "%thread",
+                        "class": "%logger{40}",
+                        "message": "%msg%n",
+                        "stack_trace": "%ex{full}"
+                        }
+                    </pattern>
+                </pattern>
+            </providers>
+        </encoder>
+    </appender>
+
+    <!--
+    - LOG tudo do nível INFO
+    -->
+    <root level="info">
+        <appender-ref ref="RollingFile" />
+        <appender-ref ref="Console" />
+        <appender-ref ref="Logstash"/>
+    </root>
+
+</configuration>
+

@@ -39,7 +39,8 @@
 		<module>commom</module>
 		<module>indicators</module>
 		<module>calculation-methods</module>
-		<module>b3</module>
+		<module>b3-scrap</module>
+		<module>b3-web</module>
 	</modules>
 
 	<!--
