@@ -1,4 +1,10 @@
+body{
+  background-color:  lightgray;
+}
 
+#__next {
+  max-height: 100vh;
+}
 .even-row {
   background-color: lightgray;
 }

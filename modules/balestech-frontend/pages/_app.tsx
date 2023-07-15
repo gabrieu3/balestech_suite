@@ -1,8 +1,9 @@
 import '../styles/global.css';
+import { AppProps } from 'next/app';
 
-function MyApp({ Component, pageProps }) {
-  // Pode adicionar um ThemeProvider aqui, se necessário
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return <Component {...pageProps} />;
-}
+};
 
 export default MyApp;
+

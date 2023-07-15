@@ -1,9 +1,10 @@
-package com.balestech.b3scrap.service;
+package com.balestech.b3scrap.service.ScrapStockIndicator;
 
 import com.balestech.b3scrap.entity.indicator.Indicator;
 import com.balestech.b3scrap.entity.indicator.IndicatorEnum;
 import com.balestech.b3scrap.entity.stock.Stock;
 import com.balestech.b3scrap.entity.stock_indicator.StockIndicator;
+import com.balestech.b3scrap.service.WebDriverBalestech;
 import com.balestech.commom.util.B3Util;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,44 +25,35 @@ import static java.util.Objects.isNull;
 @Slf4j
 @Service
 @NoArgsConstructor
-public class WebScrapStockIndicatorBtgPactual implements SiteScraper  {
+public class WebScrapStockIndicatorBtgPactual extends WebScrapStockIndicatorAbstract {
 
     private final String URL_BASE = "https://content.btgpactual.com";
 
     private final String URL_ACOES = "/research/home/acoes/ativo/:STOCK_CODE";
 
-    private List<StockIndicator> stockIndicatorList;
-
-    private Stock stock;
-
-    private List<Indicator> indicatorList;
-
     @Autowired
     private WebDriverBalestech driver;
 
     @Override
-    public List<StockIndicator> scrap(Stock stock, List<Indicator> indicatorList) {
-        StockIndicator stockIndicator;
-        setAttributes(stock, indicatorList);
-        Document documentPage = getDocumentStockPage();
-
-        for (Indicator indicator : indicatorList) {
-            stockIndicator = getIndicator(indicator, documentPage);
-            if (!isNull(stockIndicator.getStock()))
-                this.stockIndicatorList.add(stockIndicator);
+    protected StockIndicator getIndicator(Indicator indicator, Stock stock,  Document documentPage) {
+        IndicatorEnum indicatorEnum = IndicatorEnum.valueOf(indicator.getName());
+        StockIndicator stockIndicator = StockIndicator.builder().build();
+        switch (indicatorEnum) {
+            case PRICE:
+                break;
+            case VOLUME:
+                break;
+            case TARGET:
+                stockIndicator = target(indicator, stock, documentPage);
+                break;
         }
-        return stockIndicatorList;
+        return stockIndicator;
     }
 
-    private void setAttributes(Stock stock, List<Indicator> indicatorList) {
-        this.stock = stock;
-        this.indicatorList = indicatorList;
-        this.stockIndicatorList = new ArrayList<>();
-    }
-
-    private Document getDocumentStockPage() {
+    @Override
+    protected Document getDocumentStockPage(Stock stock) {
         String url = URL_BASE.concat(URL_ACOES);
-        url = url.replace(":STOCK_CODE", this.stock.getName());
+        url = url.replace(":STOCK_CODE", stock.getName());
         Document doc;
         try {
             String html = driver.run(url);
@@ -75,28 +67,13 @@ public class WebScrapStockIndicatorBtgPactual implements SiteScraper  {
         return doc;
     }
 
-    private StockIndicator getIndicator(Indicator indicator, Document documentPage) {
-        IndicatorEnum indicatorEnum = IndicatorEnum.valueOf(indicator.getName());
-        StockIndicator stockIndicator = StockIndicator.builder().build();
-        switch (indicatorEnum) {
-            case PRICE:
-                break;
-            case VOLUME:
-                break;
-            case TARGET:
-                stockIndicator = target(documentPage, indicator);
-                break;
-        }
-        return stockIndicator;
-    }
-
-    private StockIndicator target(Document documentPage, Indicator indicator) {
+    private StockIndicator target(Indicator indicator, Stock stock,  Document documentPage) {
         Elements stockPrice;
         stockPrice = documentPage.select("div[class=\"target-price-present\"]");
         String stringValue = stockPrice.text().replace("R$", "").trim();
         BigDecimal numberValue = B3Util.formatBigDecimal(stringValue, ',', '.');
         return StockIndicator.builder().
-                stock(this.stock).
+                stock(stock).
                 indicator(indicator).
                 valueNumber(numberValue).
                 valueString(stringValue).

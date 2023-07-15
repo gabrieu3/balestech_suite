@@ -3,11 +3,10 @@ package com.balestech.b3scrap.service;
 import com.balestech.b3scrap.entity.indicator.Indicator;
 import com.balestech.b3scrap.entity.indicator.IndicatorRepository;
 import com.balestech.b3scrap.entity.stock_indicator.StockIndicatorRepository;
-import com.balestech.b3scrap.service.*;
 import com.balestech.b3scrap.entity.stock.Stock;
 import com.balestech.b3scrap.entity.stock.StockRepository;
 import com.balestech.b3scrap.entity.stock_indicator.StockIndicator;
-import com.balestech.b3scrap.service.*;
+import com.balestech.b3scrap.service.ScrapStockIndicator.*;
 import com.balestech.b3scrap.web.enum_web.SiteScraperEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
@@ -51,8 +50,8 @@ public class WebScraper {
     @Autowired
     private StockIndicatorRepository stockIndicatorRepository;
 
-    private List<SiteScraper> sites(SiteScraperEnum site) {
-        List<SiteScraper> scrapers = new ArrayList<>();
+    private List<WebScrapStockIndicator> sites(SiteScraperEnum site) {
+        List<WebScrapStockIndicator> scrapers = new ArrayList<>();
 
         switch(site){
             case INVESTIDOR10   : scrapers.add(investidor10); break;
@@ -75,14 +74,14 @@ public class WebScraper {
         List<StockIndicator> stockIndicatorList = new ArrayList<>();
         List <StockIndicator> listIndicator = new ArrayList<>();
 
-        List<SiteScraper> siteScraperList = sites(site);
+        List<WebScrapStockIndicator> siteScraperList = sites(site);
 
         List<Stock> stockList = stockRepository.findByStatus(ATIVO);
         List<Indicator> indicatorList = indicatorRepository.findAll();
 
         for(Stock stock: stockList){
             try {
-                for(SiteScraper siteScraper: siteScraperList){
+                for(WebScrapStockIndicator siteScraper: siteScraperList){
                     listIndicator = siteScraper.scrap(stock, indicatorList);
                     if(listIndicator.size() > 0)
                         stockIndicatorList.addAll(listIndicator);
