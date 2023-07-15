@@ -1,4 +1,4 @@
-package com.balestech.b3scrap.service;
+package com.balestech.b3scrap.service.ScrapStockIndicator;
 
 import com.balestech.b3scrap.entity.indicator.Indicator;
 import com.balestech.b3scrap.entity.indicator.IndicatorEnum;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 
@@ -26,11 +24,11 @@ import static java.util.Objects.isNull;
 @Slf4j
 @Service
 @NoArgsConstructor
-public class WebScrapStockIndicatorXP implements SiteScraper {
+public class WebScrapStockIndicatorTradingView implements WebScrapStockIndicator {
 
-    private final String URL_BASE = "https://conteudos.xpi.com.br";
+    private final String URL_BASE = "https://br.tradingview.com";
 
-    private final String URL_ACOES = "/acoes/:STOCK_CODE";
+    private final String URL_ACOES = "/symbols/BMFBOVESPA-:STOCK_CODE/forecast/";
 
     private List<StockIndicator> stockIndicatorList;
 
@@ -93,28 +91,15 @@ public class WebScrapStockIndicatorXP implements SiteScraper {
     }
 
     private StockIndicator target(Document documentPage, Indicator indicator) {
-        Element stockPriceTable = documentPage.selectFirst("ul[class=\"dados-produto\"]");
-        Elements stockPriceElements = stockPriceTable.select("li[class=\"item-dado-produto\"]");
-        List<Element> elementPrice = stockPriceElements.stream().filter(element ->{
-            if(element.text().contains("Preço Alvo"))
-                return true;
-            return false;
-        }).collect(Collectors.toList());
-
-
-        String stringValue = elementPrice.get(0).text().replace("Preço Alvo","").trim();
-        String stringValueOrig = stringValue;
-        if(stringValue.contains("R$"))
-            stringValue = stringValue.replace("R$","").trim();
-        else
-            stringValue = stringValue.replace("$","").trim();
-
-        BigDecimal numberValue = B3Util.formatBigDecimal(stringValue,',','.');
+        Elements stockPrice;
+        stockPrice = documentPage.select("span[class=\"highlight-maJ2WnzA highlight-Cimg1AIh price-qWcO4bp9\"]");
+        String stringValue = stockPrice.text().replace("R$","").trim();
+        BigDecimal numberValue = B3Util.formatBigDecimal(stringValue,'.',',');
         return StockIndicator.builder().
                 stock(this.stock).
                 indicator(indicator).
                 valueNumber(numberValue).
-                valueString(stringValueOrig).
+                valueString(stringValue).
                 dateTimeCreate(LocalDateTime.now()).
                 localInfo(URL_BASE).build();
     }

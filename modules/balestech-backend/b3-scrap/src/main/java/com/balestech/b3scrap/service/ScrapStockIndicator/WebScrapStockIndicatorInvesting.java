@@ -1,16 +1,19 @@
-package com.balestech.b3scrap.service;
+package com.balestech.b3scrap.service.ScrapStockIndicator;
 
 import com.balestech.b3scrap.entity.indicator.Indicator;
 import com.balestech.b3scrap.entity.indicator.IndicatorEnum;
 import com.balestech.b3scrap.entity.stock.Stock;
 import com.balestech.b3scrap.entity.stock_indicator.StockIndicator;
+import com.balestech.b3scrap.entity.stock_site.StockSite;
+import com.balestech.b3scrap.entity.stock_site.StockSiteRepository;
+
 import com.balestech.commom.util.B3Util;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -25,11 +28,11 @@ import static java.util.Objects.isNull;
 @Slf4j
 @Service
 @NoArgsConstructor
-public class WebScrapStockIndicatorWsj implements SiteScraper {
+public class WebScrapStockIndicatorInvesting implements WebScrapStockIndicator {
 
-    private final String URL_BASE = "https://www.wsj.com";
-
-    private final String URL_ACOES = "/market-data/quotes/BR/:STOCK_CODE/research-ratings";
+    private final String SITE = "Investing";
+    @Autowired
+    private StockSiteRepository stockSiteRepository;
 
     private List<StockIndicator> stockIndicatorList;
 
@@ -37,18 +40,18 @@ public class WebScrapStockIndicatorWsj implements SiteScraper {
 
     private List<Indicator> indicatorList;
 
-    private void setAttributes(Stock stock, List<Indicator> indicatorList){
+    private void setAttributes(Stock stock, List<Indicator> indicatorList) {
         this.stock = stock;
         this.indicatorList = indicatorList;
         this.stockIndicatorList = new ArrayList<>();
     }
 
     @Override
-    public List<StockIndicator> scrap(Stock stock, List<Indicator> indicatorList){
+    public List<StockIndicator> scrap(Stock stock, List<Indicator> indicatorList) {
         try {
             StockIndicator stockIndicator;
             setAttributes(stock, indicatorList);
-            Document documentPage = getDocumentStockPage();
+            Document documentPage = getDocumentStockPage(stock);
 
             for(Indicator indicator: indicatorList ){
                 stockIndicator = getIndicator(indicator, documentPage);
@@ -61,25 +64,25 @@ public class WebScrapStockIndicatorWsj implements SiteScraper {
         return stockIndicatorList;
     }
 
-    private Document getDocumentStockPage(){
-        String url = URL_BASE.concat(URL_ACOES);
-        url = url.replace(":STOCK_CODE", this.stock.getName());
+    private Document getDocumentStockPage(Stock stock) {
+        List<StockSite> stockSiteList = stockSiteRepository.findByStockAndSite(stock, SITE);
+        String url = stockSiteList.get(0).getPath();
         Document doc;
 
         try {
             doc = Jsoup.connect(url).get();
-            log.info("Scrapping: "+url);
+            log.info("Scrapping: " + url);
         } catch (IOException e) {
-            log.error("Não foi possível acessar a URL: "+url);
+            log.error("Não foi possível acessar a URL: " + url);
             throw new RuntimeException(e);
         }
         return doc;
     }
 
-    private StockIndicator getIndicator(Indicator indicator, Document documentPage){
+    private StockIndicator getIndicator(Indicator indicator, Document documentPage) {
         IndicatorEnum indicatorEnum = IndicatorEnum.valueOf(indicator.getName());
         StockIndicator stockIndicator = StockIndicator.builder().build();
-        switch (indicatorEnum){
+        switch (indicatorEnum) {
             case PRICE:
                 break;
             case VOLUME:
@@ -92,23 +95,17 @@ public class WebScrapStockIndicatorWsj implements SiteScraper {
     }
 
     private StockIndicator target(Document documentPage, Indicator indicator) {
-        Element stockPriceTable = documentPage.selectFirst("div[class=\"cr_data rr_stockprice module\"]");
-        Elements stockPriceElements = stockPriceTable.select("span[class=\"data_data\"]");
-        String stringValue = stockPriceElements.get(3).text().trim();
-        String stringValueOrig = stringValue;
-        if(stringValue.contains("R$"))
-            stringValue = stringValue.replace("R$","").trim();
-        else
-            stringValue = stringValue.replace("$","").trim();
-
-        BigDecimal numberValue = B3Util.formatBigDecimal(stringValue,'.',',');
+        Elements stockPrice;
+        stockPrice = documentPage.select("span[class=\"highlight-maJ2WnzA highlight-Cimg1AIh price-qWcO4bp9\"]");
+        String stringValue = stockPrice.text().replace("R$", "").trim();
+        BigDecimal numberValue = B3Util.formatBigDecimal(stringValue, '.', ',');
         return StockIndicator.builder().
                 stock(this.stock).
                 indicator(indicator).
                 valueNumber(numberValue).
-                valueString(stringValueOrig).
+                valueString(stringValue).
                 dateTimeCreate(LocalDateTime.now()).
-                localInfo(URL_BASE).build();
+                localInfo(SITE).build();
     }
 
 }

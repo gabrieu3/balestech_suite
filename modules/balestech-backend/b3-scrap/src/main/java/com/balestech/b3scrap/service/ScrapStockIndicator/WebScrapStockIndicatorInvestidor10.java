@@ -1,4 +1,4 @@
-package com.balestech.b3scrap.service;
+package com.balestech.b3scrap.service.ScrapStockIndicator;
 
 import com.balestech.b3scrap.entity.indicator.Indicator;
 import com.balestech.b3scrap.entity.indicator.IndicatorEnum;
@@ -25,7 +25,7 @@ import static java.util.Objects.isNull;
 @Slf4j
 @NoArgsConstructor
 @Service
-public class WebScrapStockIndicatorInvestidor10 implements SiteScraper {
+public class WebScrapStockIndicatorInvestidor10 implements WebScrapStockIndicator {
 
     private final String URL_BASE = "https://investidor10.com.br";
 

@@ -1,0 +1,11 @@
+server:
+  port: 8031
+  servlet:
+    context-path: /b3
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: your-group-id
+      auto-offset-reset: earliest

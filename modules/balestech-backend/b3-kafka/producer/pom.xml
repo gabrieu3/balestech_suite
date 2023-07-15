@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<!--
+	  - PAI -> POM MODULES
+	  -->
+	<parent>
+		<groupId>com.balestech.kafka</groupId>
+		<artifactId>kafka</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+
+	<!--
+	  - ARTIFACT ID DEFINITIONS
+	  -->
+	<groupId>com.balestech.kproducer</groupId>
+	<artifactId>kafka-producer</artifactId>
+	<packaging>jar</packaging>
+	<name>Balestech :: Financial System :: APIs :: Microservice :: KAFKA :: Producer</name>
+
+	<build>
+		<!--
+		  - PERMITE EXECUTAR A CLASSE MAIN DO PROJETO VIA JAVA -JAR
+		  - mvn package spring-boot:repackage
+		  -->
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<mainClass>com.balestech.kproducer.KafkaProducerApplication</mainClass>
+					<layout>JAR</layout>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
+
