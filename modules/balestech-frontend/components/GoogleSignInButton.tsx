@@ -1,9 +1,12 @@
 import React from 'react';
 import { Button } from '@mui/material';
-import { Google } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
 import { googleLogout, useGoogleLogin, GoogleOAuthProvider } from '@react-oauth/google';
 import axios from 'axios';
+import {  Stack } from '@mui/material';
+import Iconify from '../components/iconify';
+
+
 
 const GoogleSignInButton: React.FC = () => {
   return (
@@ -59,7 +62,12 @@ function BalestechLogin(){
             <button onClick={logOut}>Log out</button>
           </div>
         ) : (*/
-          <Button
+            <Stack direction="row" spacing={2}>
+              <Button fullWidth size="large" color="inherit" variant="outlined" onClick={() => {login();}}>
+                <Iconify icon="eva:google-fill" color="#DF3E30" width={22} height={22} />
+              </Button>
+            </Stack>
+          /*<Button
             type="submit"
             fullWidth
             variant="contained"

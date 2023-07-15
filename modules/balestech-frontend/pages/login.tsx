@@ -1,108 +1,85 @@
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import Link from "@mui/material/Link";
-import Grid from "@mui/material/Grid";
+import { Helmet } from 'react-helmet-async';
+// @mui
+import { styled } from '@mui/material/styles';
+import { Link, Container, Typography, Divider, Stack, Button } from '@mui/material';
 import Box from "@mui/material/Box";
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from "@mui/material/Typography";
-import Container from "@mui/material/Container";
-import Stack from '@mui/material/Stack';
-import GoogleSignInButton from "../src/components/GoogleSignInButton"
+// hooks
+import useResponsive from '../hooks/useResponsive';
+// components
+import Iconify from '../components/iconify';
+// sections
+import { LoginForm } from '../sections/auth/login';
+//
+import Logo from '../components/logo';
+import GoogleSignInButton from "../components/GoogleSignInButton";
 
-export default function SignIn() {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
-  };
+// ----------------------------------------------------------------------
+
+const StyledRoot = styled('div')(({ theme }) => ({
+  [theme.breakpoints.up('md')]: {
+    display: 'flex',
+  },
+}));
+
+const StyledContent = styled('div')(({ theme }) => ({
+  maxWidth: 480,
+  margin: 'auto',
+  minHeight: '100vh',
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: theme.spacing(0, 0),
+
+}));
+
+// ----------------------------------------------------------------------
+
+export default function LoginPage() {
+  const mdUp = useResponsive('up', 'md');
 
   return (
-    <Box
-    
-    sx={{
-      width: '100%',
-      height: '100%',
-    }}>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">Balestech Suite</Typography>
-        </Toolbar>
-      </AppBar>
+    <>
+      <Helmet>
+        <title> Login | Balestech Suite </title>
+      </Helmet>
 
-      <Container component="main" maxWidth="sm">
+      <StyledRoot>
+      
+      
+        <Container maxWidth="sm">
+          <StyledContent>
           <Box
               sx={{
-                boxShadow: 3,
-                backgroundColor: '#FFF',
+                boxShadow: 20,
                 borderRadius: 2,
                 px: 4,
                 py: 6,
-                marginTop: 8,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
               }}
           >
-              <Typography component="h1" variant="h5">
-                  Balestech Sign In
+            <Typography align='center' variant="h4" gutterBottom >
+              Sign in to  <Logo/>alestech Suite  
+            </Typography>
+            
+
+            <Typography variant="body2" sx={{ mb: 5 }}>
+              Don’t have an account? {''}
+              <Link variant="subtitle2">Get started</Link>
+            </Typography>
+
+            <GoogleSignInButton />
+
+            <Divider sx={{ my: 3 }}>
+              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                OR
               </Typography>
-              <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-                  <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    id="email"
-                    label="Email Address"
-                    name="email"
-                    autoComplete="email"
-                    autoFocus
-                  />
-                  <TextField
-                    margin="normal"
-                    required
-                    fullWidth
-                    name="password"
-                    label="Password"
-                    type="password"
-                    id="password"
-                    autoComplete="current-password"
-                  />
+            </Divider>
 
-                  <FormControlLabel
-                    control={<Checkbox value="remember" color="primary" />}
-                    label="Remember me"
-                  />
-
-                  <Box sx={{ width: '100%' }}>
-
-                    <Stack spacing={2} direction="row" useFlexGap>
-                      <Button type="submit" fullWidth variant="contained" sx={{ mt: 2, mb: 2}}>Sign In</Button>
-                      <GoogleSignInButton />
-                    </Stack>
-                      
-                  </Box>
-                  
-                  <Grid container>
-                    <Grid item xs>
-                      <Link href="#" variant="body2">
-                        Forgot password?
-                      </Link>
-                    </Grid>
-                    <Grid item>
-                      <Link href="#" variant="body2">
-                        {"Don't have an account? Sign Up"}
-                      </Link>
-                    </Grid>
-                  </Grid>
-              </Box>
-          </Box>
-      </Container>
-    </Box>
+            <LoginForm />
+            </Box>
+          </StyledContent>
+        </Container>
+        
+      </StyledRoot>
+    </>
   );
 }
