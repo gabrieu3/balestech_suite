@@ -1,0 +1,10 @@
+/**
+ * Cria a imagem Docker
+ */
+> docker build -t keycloak-app .
+
+/**
+ * Cria o Container
+ */
+>docker reun -e KEYCLOAK_ADMIN=admin -e KEYCLOAK_ADMIN_PASSWORD=admin -p 8080:8080 keycloak-app
+
