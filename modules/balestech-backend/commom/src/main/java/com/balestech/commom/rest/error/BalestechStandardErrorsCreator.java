@@ -2,7 +2,7 @@ package com.balestech.commom.rest.error;
 
 import java.util.Locale;
 
-import com.balestech.commom.dto.BalestechErrorDTO;
+import com.balestech.commom.domain.error.BalestechErrorDTO;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;

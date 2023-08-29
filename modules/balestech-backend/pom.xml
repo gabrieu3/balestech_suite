@@ -42,6 +42,7 @@
 		<module>b3-scrap</module>
 		<module>b3-web</module>
 		<module>b3-kafka</module>
+		<module>scrapping</module>
 	</modules>
 
 	<!--

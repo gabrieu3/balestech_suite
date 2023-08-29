@@ -1,8 +1,8 @@
 package com.balestech.commom.rest.error;
 
 import com.balestech.commom.config.ProdutosCoreObjectMapper;
-import com.balestech.commom.dto.BalestechRestErrorDTO;
-import com.balestech.commom.dto.BalestechRestResponseDTO;
+import com.balestech.commom.domain.error.BalestechRestErrorDTO;
+import com.balestech.commom.domain.error.BalestechRestResponseDTO;
 import com.balestech.commom.util.JsonUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;
