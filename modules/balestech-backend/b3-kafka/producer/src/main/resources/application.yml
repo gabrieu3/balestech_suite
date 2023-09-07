@@ -1,15 +1,19 @@
 server:
-  port: 8051
+  port: 8200
   servlet:
-    context-path: /b3
+    context-path: /kafka
 
+#KAFKA - MESSAGES
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/balestech
-    username: balestech
-    password: balestech
-    driver-class-name: org.postgresql.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:9092
+
+#ACTUATOR - MONITORING
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always

@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import {isUserLoggedIn} from '../src/auth/Authentication'
+import {isUserLoggedIn} from '../src/auth2/Authentication'
 
 const HomePage: React.FC = () => {
   const router = useRouter();

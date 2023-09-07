@@ -1,5 +1,5 @@
-import { useState } from 'react';
-/*import { useNavigate } from 'react-router-dom';*/
+import { useState, useEffect } from 'react';
+import { useKeycloak } from "@react-keycloak/web";
 // @mui
 import { Link, Stack, IconButton, InputAdornment, TextField, Checkbox, FormControlLabel } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
@@ -9,23 +9,38 @@ import Iconify from '../../../components/iconify';
 // ----------------------------------------------------------------------
 
 export default function LoginForm() {
-  /*const navigate = useNavigate();*/
+  const { keycloak } = useKeycloak();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleClick = () => {
-    /*navigate('/dashboard', { replace: true });*/
-    console.log('/dashboard');
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    try {
+      await keycloak.login({
+        username,
+        password,
+      });
+    } catch (error) {
+      console.error("Failed to log in", error);
+    }
   };
 
   return (
     <>
       <Stack spacing={3}>
-        <TextField name="email" label="Email address" />
+        <TextField name="email" 
+            label="Email address"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
         <TextField
           name="password"
           label="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
           type={showPassword ? 'text' : 'password'}
           InputProps={{
             endAdornment: (
@@ -49,9 +64,12 @@ export default function LoginForm() {
         </Link>
       </Stack>
 
-      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleClick}>
+      <LoadingButton fullWidth size="large" type="submit" variant="contained" onClick={handleLogin}>
         Login
       </LoadingButton>
     </>
   );
 }
+
+
+

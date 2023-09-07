@@ -1,7 +1,7 @@
 package com.balestech.commom.rest;
 
 
-import com.balestech.commom.dto.BalestechRestResponseDTO;
+import com.balestech.commom.domain.error.BalestechRestResponseDTO;
 import com.balestech.commom.rest.error.BalestechGenericExceptionHandler;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;

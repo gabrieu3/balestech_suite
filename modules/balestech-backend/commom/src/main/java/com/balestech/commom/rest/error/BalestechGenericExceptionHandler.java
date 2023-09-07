@@ -1,6 +1,6 @@
 package com.balestech.commom.rest.error;
 
-import com.balestech.commom.dto.BalestechRestErrorDTO;
+import com.balestech.commom.domain.error.BalestechRestErrorDTO;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

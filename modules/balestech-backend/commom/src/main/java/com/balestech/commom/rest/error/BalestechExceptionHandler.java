@@ -1,6 +1,6 @@
 package com.balestech.commom.rest.error;
 
-import com.balestech.commom.dto.BalestechRestResponseDTO;
+import com.balestech.commom.domain.error.BalestechRestResponseDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.ResponseEntity;
 

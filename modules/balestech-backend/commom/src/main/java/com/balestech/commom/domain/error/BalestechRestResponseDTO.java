@@ -1,4 +1,4 @@
-package com.balestech.commom.dto;
+package com.balestech.commom.domain.error;
 
 import lombok.*;
 

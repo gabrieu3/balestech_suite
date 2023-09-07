@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+      - PAI -> POM MODULES
+      -->
+    <parent>
+        <groupId>com.balestech.suite.api</groupId>
+        <artifactId>api</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <!--
+      - ARTIFACT ID DEFINITIONS
+      -->
+    <groupId>com.balestech.scrapping</groupId>
+    <artifactId>module</artifactId>
+    <packaging>pom</packaging>
+    <name>Balestech :: Financial System :: APIs :: Microservice :: SCRAPPING</name>
+
+
+    <!--
+         - MODULES
+         -->
+    <modules>
+        <module>tradingview</module>
+    </modules>
+
+    <dependencies>
+
+        <!--
+           - Serve para conexão com o Kafka
+           -->
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
+        <!--
+          - Lib para fazer webscrapping
+         -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.16.1</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>
+

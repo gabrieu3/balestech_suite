@@ -1,0 +1,55 @@
+version: '3.8'
+services:
+
+  mongodb:
+    image: mongo:6.0.6
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    healthcheck:
+      test: echo 'db.stats().ok' | mongosh localhost:27017/bookdb --quiet
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:22.0.1
+    container_name: keycloak
+    ports:
+      - "8080:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      KC_DB: dev-mem
+    command: start-dev
+    healthcheck:
+      test: "curl -f http://localhost:8080/admin || exit 1"
+      
+      
+      
+services:
+  postgres:
+      image: postgres
+      container_name: KEYCLOAK-DB
+      restart: always
+      volumes:
+        - /volume1/docker/keycloakdb:/var/lib/postgresql/data
+      environment:
+        POSTGRES_DB: keycloak
+        POSTGRES_USER: keycloak
+        POSTGRES_PASSWORD: password
+  keycloak:
+      image: quay.io/keycloak/keycloak:22.0.1
+      container_name: KEYCLOAK
+      restart: always
+      environment:
+        DB_VENDOR: POSTGRES
+        DB_ADDR: postgres
+        DB_DATABASE: keycloak
+        DB_USER: keycloak
+        DB_SCHEMA: public
+        DB_PASSWORD: password
+        KEYCLOAK_USER: marius
+        KEYCLOAK_PASSWORD: mariushosting
+        PROXY_ADDRESS_FORWARDING: true
+      ports:
+        - 8711:8080
+      depends_on:
+        - postgres      

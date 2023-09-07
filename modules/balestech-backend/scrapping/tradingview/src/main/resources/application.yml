@@ -1,0 +1,18 @@
+server:
+  port: 8100
+  servlet:
+    context-path: /scrap
+
+integration:
+  kafka-producer:
+    host: kafka-producer:8200/kafka/api/v1
+
+#ACTUATOR - MONITORING
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
