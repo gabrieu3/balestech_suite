@@ -1,10 +1,9 @@
 package com.balestech.scrapping.tradingview.service;
 
 import com.balestech.commom.domain.indicator.IndicatorEnum;
-import com.balestech.commom.domain.stock.StockEnum;
 import com.balestech.commom.util.EnumUtils;
-import com.balestech.scrapping.tradingview.async.AsyncTradingViewScrapRunner;
-import com.balestech.scrapping.tradingview.async.dto.AsyncTradingViewFilter;
+import com.balestech.scrapping.tradingview.domain.dto.AsyncTradingViewFilter;
+import com.balestech.scrapping.tradingview.domain.dto.StockEnumTradingView;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,12 +13,12 @@ import java.util.List;
 
 @Slf4j
 @Service
-public class WebScrapTradingView {
+public class DataFlowTradingView {
 
     @Autowired
     private AsyncTradingViewScrapRunner asyncScrapTradingViewScrapRunner;
 
-    public void scrap() {
+    public void run() {
         log.info("Scrapping TradingView");
         asyncScrapTradingViewScrapRunner.executeMultipleTasksAndWait(getAsyncTradingViewFilterList());
     }
@@ -30,7 +29,7 @@ public class WebScrapTradingView {
 
         List<AsyncTradingViewFilter> asyncTradingViewFilterList = new ArrayList<>();
 
-        for(StockEnum stockEnum: EnumUtils.toList(StockEnum.class)){
+        for(StockEnumTradingView stockEnum: EnumUtils.toList(StockEnumTradingView.class)){
             asyncTradingViewFilterList.add(AsyncTradingViewFilter.builder().stock(stockEnum).indicatorList(listIndicatorEnum).build());
         }
 

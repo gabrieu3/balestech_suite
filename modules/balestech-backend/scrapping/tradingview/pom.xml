@@ -22,8 +22,7 @@
 	<packaging>jar</packaging>
 	<name>Balestech :: Financial System :: APIs :: Microservice :: SCRAPPING :: TradingView</name>
 
-
-    <build>
+	<build>
 		<!--
 		  - PERMITE EXECUTAR A CLASSE MAIN DO PROJETO VIA JAVA -JAR
 		  - mvn package spring-boot:repackage

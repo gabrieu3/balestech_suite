@@ -1,0 +1,8 @@
+version: '3'
+services:
+  tradingview-scrap:
+    build:
+      context: ./balestech-backend/scrapping/tradingview
+      dockerfile: Dockerfile
+    ports:
+      - "8100:8100"

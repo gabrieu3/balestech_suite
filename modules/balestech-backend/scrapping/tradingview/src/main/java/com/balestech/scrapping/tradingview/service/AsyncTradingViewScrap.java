@@ -1,6 +1,7 @@
-package com.balestech.scrapping.tradingview.async;
+package com.balestech.scrapping.tradingview.service;
 
-import com.balestech.scrapping.tradingview.async.dto.AsyncTradingViewFilter;
+import com.balestech.scrapping.tradingview.domain.dto.AsyncTradingViewFilter;
+import com.balestech.scrapping.tradingview.domain.dto.StockIndicatorTradingViewDTO;
 import com.balestech.scrapping.tradingview.service.WebScrapStockIndicatorTradingView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -16,7 +17,7 @@ public class AsyncTradingViewScrap {
     private WebScrapStockIndicatorTradingView webScrapStockIndicatorTradingView;
 
     @Async("taskExecutor")
-    public Future<String> executeTask(AsyncTradingViewFilter asyncTradingViewFilter) {
+    public Future<StockIndicatorTradingViewDTO> executeTask(AsyncTradingViewFilter asyncTradingViewFilter) {
         return new AsyncResult<>(webScrapStockIndicatorTradingView.scrap(asyncTradingViewFilter.getStock(), asyncTradingViewFilter.getIndicatorList()));
     }
 }

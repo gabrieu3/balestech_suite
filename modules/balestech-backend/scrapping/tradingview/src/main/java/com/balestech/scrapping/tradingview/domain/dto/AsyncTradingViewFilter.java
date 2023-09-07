@@ -1,7 +1,6 @@
-package com.balestech.scrapping.tradingview.async.dto;
+package com.balestech.scrapping.tradingview.domain.dto;
 
 import com.balestech.commom.domain.indicator.IndicatorEnum;
-import com.balestech.commom.domain.stock.StockEnum;
 import lombok.*;
 
 import java.util.List;
@@ -12,6 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AsyncTradingViewFilter {
-    StockEnum stock;
+    StockEnumTradingView stock;
     List<IndicatorEnum> indicatorList;
 }

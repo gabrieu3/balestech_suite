@@ -1,21 +1,15 @@
 package com.balestech.scrapping.tradingview.job;
 
-import com.balestech.scrapping.tradingview.service.WebScrapTradingView;
+import com.balestech.scrapping.tradingview.service.DataFlowTradingView;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
-
 @Component
-public class WebScrapSchedulerTradingView {
+public class DataFLowSchedulerTradingView {
 
     @Autowired
-    private WebScrapTradingView webScrapTradingView;
+    private DataFlowTradingView dataFlowTradingView;
 
     /**
      * 1 - Segundos
@@ -31,7 +25,7 @@ public class WebScrapSchedulerTradingView {
      */
     @Scheduled(cron = "${spring.task.scheduling.cron:30 * * * * ?}")
     public void execute() {
-        webScrapTradingView.scrap();
+        dataFlowTradingView.run();
     }
 
 }

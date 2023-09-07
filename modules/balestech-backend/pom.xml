@@ -172,6 +172,14 @@
 			<version>2.0</version>
 		</dependency>
 
+		<!--
+		   - Serve para gerar métricas de monitoramento dos containers
+		   - por exemplo healthcheck para saber se a aplicação está funcional
+		   -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
 	</dependencies>
 
 

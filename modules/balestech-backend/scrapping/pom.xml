@@ -19,7 +19,7 @@
     <groupId>com.balestech.scrapping</groupId>
     <artifactId>module</artifactId>
     <packaging>pom</packaging>
-    <name>Balestech :: Financial System :: APIs :: Microservice :: SCRAPPING </name>
+    <name>Balestech :: Financial System :: APIs :: Microservice :: SCRAPPING</name>
 
 
     <!--
@@ -30,7 +30,6 @@
     </modules>
 
     <dependencies>
-
 
         <!--
            - Serve para conexão com o Kafka
@@ -48,6 +47,7 @@
             <artifactId>jsoup</artifactId>
             <version>1.16.1</version>
         </dependency>
+
 
     </dependencies>
 

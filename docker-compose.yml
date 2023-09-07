@@ -1,6 +1,6 @@
 version: '3'
-volumes:
-   postgres-data:
+#volumes:
+#   postgres-data:
 #  elk-data:
 #  portainer-data:
 #networks:
@@ -48,14 +48,77 @@ services:
 #      - balestech-network
 #    depends_on:
 #      - elk
-  db:
-    image: postgres
-    container_name: balestech_database
-    environment:
-      POSTGRES_USER: balestech
-      POSTGRES_PASSWORD: balestech
-      POSTGRES_DB: balestech
+#  db:
+#    image: postgres
+#    container_name: balestech_database
+#    environment:
+#      POSTGRES_USER: balestech
+#      POSTGRES_PASSWORD: balestech
+#      POSTGRES_DB: balestech
+#    ports:
+#      - 5432:5432
+#    volumes:
+#      - 'postgres-data:/var/lib/postgresql/data'
+
+  tradingview-scrap:
+    build:
+      context: ./modules/balestech-backend/scrapping/tradingview
+      dockerfile: Dockerfile   
     ports:
-      - 5432:5432
-    volumes:
-      - 'postgres-data:/var/lib/postgresql/data'
+      - "8100:8100"
+    depends_on:
+      - kafka-producer  
+    networks:
+      - my-network   
+    command: ["/app/wait-for-kafka-producer.sh", "http://kafka-producer:8200/kafka/actuator/health"]      
+
+  kafka-producer:
+    build:
+      context: ./modules/balestech-backend/b3-kafka/producer
+      dockerfile: Dockerfile
+    depends_on:
+      - kafka       
+    ports:
+      - "8200:8200"
+    networks:
+      - my-network         
+    #command: ["/app/wait-for-kafka.sh", "kafka", "9092"]
+      
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    networks: 
+      - my-network
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    networks: 
+      - my-network
+    depends_on:
+      - zookeeper
+    ports:
+      - 9092:9092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://kafka:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  kafdrop:
+    image: obsidiandynamics/kafdrop:latest
+    networks: 
+      - my-network
+    depends_on:
+      - kafka
+    ports:
+      - 19000:9000
+    environment:
+      KAFKA_BROKERCONNECT: kafka:29092      
+
+networks:
+  my-network:
+    driver: bridge      
