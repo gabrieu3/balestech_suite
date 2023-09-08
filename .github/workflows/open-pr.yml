@@ -17,8 +17,8 @@ jobs:
         distribution: 'temurin'
 
     - name: Change Directory to Parent
-      run: cd /home/runner/work/balestech_suite/balestech_suite/modules
-      
+      run: cd /home/runner/work/balestech_suite/modules
+
     - name: Build with Maven
       run: mvn clean install -B -DskipTests=false
 
