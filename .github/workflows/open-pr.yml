@@ -17,7 +17,7 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Maven
-      run: mvn clean install -B -DskipTests=false
+      run: mvn  -f modules/pom.xml clean install -B -DskipTests=false
 
     - name: Run Tests
-      run: mvn test
+      run: mvn -f modules/pom.xml test
