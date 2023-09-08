@@ -19,7 +19,7 @@ jobs:
     - name: Build with Maven
       run: |
         cd /home/runner/work/balestech_suite/balestech_suite/modules
-        mvn clean install -B -DskipTests=false
+        mvn clean install -B -DskipTests
 
     - name: Run Tests
       run: |
