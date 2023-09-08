@@ -15,15 +15,13 @@ jobs:
       with:
         java-version: '20'
         distribution: 'temurin'
-
-    - name: Change Directory to Parent
-      run: cd /home/runner/work/balestech_suite/balestech_suite/modules
-
-    - name: Local Directory to Parent
-      run: ls
-      
+     
     - name: Build with Maven
-      run: mvn clean install -B -DskipTests=false
+      run: |
+        cd /home/runner/work/balestech_suite/balestech_suite/modules
+        mvn clean install -B -DskipTests=false
 
     - name: Run Tests
-      run: mvn test
+      run: |
+        cd /home/runner/work/balestech_suite/balestech_suite/modules
+        mvn test
