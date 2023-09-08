@@ -19,6 +19,9 @@ jobs:
     - name: Change Directory to Parent
       run: cd /home/runner/work/balestech_suite/balestech_suite/modules
 
+    - name: Local Directory to Parent
+      run: pwd
+      
     - name: Build with Maven
       run: mvn clean install -B -DskipTests=false
 
