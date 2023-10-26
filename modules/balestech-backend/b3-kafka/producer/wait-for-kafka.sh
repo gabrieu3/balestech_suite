@@ -1,10 +1,10 @@
 #!/bin/bash
 
-host="$1"
-port="$2"
-max_attempts=30
-attempt=1
-timeout=10
+#host="$1"
+#port="$2"
+#max_attempts=30
+#attempt=1
+#timeout=10
 
 # Esperar até que a conexão com o serviço do Kafka seja bem-sucedida ou atingir o número máximo de tentativas
 #until [ $attempt -gt $max_attempts ]; do
@@ -32,16 +32,33 @@ timeout=10
 #echo "Não foi possível se conectar ao serviço do Kafka após $max_attempts tentativas."
 #exit 1
 
-until [ $attempt -gt $max_attempts ]; do
-  if curl -s telnet://${kafka_host}:${kafka_port} | grep "Connected"; then
-    echo "O serviço do Kafka está saudável e pronto para aceitar conexões."
-    exit 0
-  fi
+#until [ $attempt -gt $max_attempts ]; do
+#  if curl -s telnet://${kafka_host}:${kafka_port} | grep "Connected"; then
+#    echo "O serviço do Kafka está saudável e pronto para aceitar conexões."
+#    exit 0
+#  fi
 
-  sleep "$timeout"
-  attempt=$((attempt + 1))
-  echo "Aguardando a disponibilidade de $host:$port..."
+#  sleep "$timeout"
+#  attempt=$((attempt + 1))
+#  echo "Aguardando a disponibilidade de $host:$port..."
+#done
+
+#echo "Não foi possível se conectar ao serviço do Kafka após $max_attempts tentativas."
+#exit 1
+#!/bin/sh
+
+set -e
+
+host="$1"
+port="$2"
+shift 2
+cmd="$@"
+
+until ncat -z "$host" "$port"; do
+  >&2 echo "Kafka não está disponível - esperando..."
+  sleep 60
 done
 
-echo "Não foi possível se conectar ao serviço do Kafka após $max_attempts tentativas."
-exit 1
+>&2 echo "Kafka está disponível - iniciando aplicação"
+exec $cmd
+

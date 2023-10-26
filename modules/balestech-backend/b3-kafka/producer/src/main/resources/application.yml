@@ -3,10 +3,12 @@ server:
   servlet:
     context-path: /kafka
 
+
 #KAFKA - MESSAGES
 spring:
   kafka:
     bootstrap-servers: kafka:9092
+
 
 #ACTUATOR - MONITORING
 management:

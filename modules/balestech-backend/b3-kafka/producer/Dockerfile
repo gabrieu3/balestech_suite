@@ -1,6 +1,9 @@
 # Use a imagem base do OpenJDK para Java 20
 FROM openjdk:20-jdk
 
+# Copie o binário ncat para o contêiner
+COPY ./bin/ncat /usr/local/bin/ncat
+
 # Diretório de trabalho no contêiner
 WORKDIR /app
 

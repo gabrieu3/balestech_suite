@@ -1,0 +1,27 @@
+name: Build and Test
+
+on: [push]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up JDK 20
+      uses: actions/setup-java@v3
+      with:
+        java-version: '20'
+        distribution: 'temurin'
+     
+    - name: Build with Maven
+      run: |
+        cd /home/runner/work/balestech_suite/balestech_suite/modules
+        mvn clean install -B -DskipTests
+
+    - name: Run Tests
+      run: |
+        cd /home/runner/work/balestech_suite/balestech_suite/modules
+        mvn test

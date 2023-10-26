@@ -82,7 +82,7 @@ services:
       - "8200:8200"
     networks:
       - my-network         
-    #command: ["/app/wait-for-kafka.sh", "kafka", "9092"]
+    command: ["/app/wait-for-kafka.sh", "kafka", "9092", "java", "-jar", "kafka-producer-1.0.0-SNAPSHOT.jar"]
       
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
@@ -107,6 +107,9 @@ services:
       KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    volumes:
+      - ./etc/kafka/topic/init-script.sh:/init-script.sh
+    command: /init-script.sh
 
   kafdrop:
     image: obsidiandynamics/kafdrop:latest
