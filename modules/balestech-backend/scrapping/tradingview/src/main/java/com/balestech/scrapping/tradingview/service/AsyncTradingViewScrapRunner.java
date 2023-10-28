@@ -33,8 +33,9 @@ public class AsyncTradingViewScrapRunner {
         for (Future<StockIndicatorTradingViewDTO> future: futures) {
             try {
                 response = future.get();
-                kafkaProducer.sendMessage(TradingViewUtil.TOPIC_KAFKA_TRADINGVIEW,  objectMapper.writeValueAsString(response));
-            } catch (InterruptedException | ExecutionException | JsonProcessingException e) {
+                System.out.println(response);
+                //kafkaProducer.sendMessage(TradingViewUtil.TOPIC_KAFKA_TRADINGVIEW,  objectMapper.writeValueAsString(response));
+            } catch (InterruptedException | ExecutionException /*| JsonProcessingException*/ e) {
                 e.printStackTrace();
             }
         }
