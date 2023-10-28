@@ -11,15 +11,23 @@ import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import org.openqa.selenium.By;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.xml.sax.Locator;
 
 import java.io.IOException;
 import java.util.List;
+
+import static java.util.Objects.isNull;
 
 @Slf4j
 @Service
 @NoArgsConstructor
 public class WebScrapStockIndicatorTradingView {
+
+    @Autowired
+    private WebDriverBalestech driver;
 
     public StockIndicatorTradingViewDTO scrap(StockEnumTradingView stock, List<IndicatorEnum> indicatorList) {
         StockIndicatorTradingViewDTO scrapIndicator = new StockIndicatorTradingViewDTO();
@@ -55,21 +63,23 @@ public class WebScrapStockIndicatorTradingView {
         return scrapIndicator;
     }
 
-    private Document getDocumentPage(String url) throws IOException {
+    protected Document getDocumentPage(String url, By locator, String text) {
         log.info("Scrapping: " + url);
-        return Jsoup.connect(url).get();
+        String html = isNull(locator) ? driver.run(url) : isNull(text) ? driver.runWait(url, locator) : driver.runWaitContent(url, locator, text);
+        return Jsoup.parse(html);
     }
 
     private String getTarget(StockEnumTradingView stock) throws IOException {
         String url = TradingViewUtil.URL_BASE.concat(TradingViewUtil.URL_TARGET).replace(":STOCK_CODE", stock.toString());
-        Document documentPage = getDocumentPage(url);
+        Document documentPage = getDocumentPage(url, null, null);
         Elements element = documentPage.select("span[class=\"highlight-maJ2WnzA highlight-Cimg1AIh price-qWcO4bp9\"]");
         return element.text().replace("R$", "").trim();
     }
 
     private String getPrice(StockEnumTradingView stock) throws IOException {
         String url = TradingViewUtil.URL_BASE.concat(TradingViewUtil.URL_PRICE).replace(":STOCK_CODE", stock.toString());
-        Document documentPage = getDocumentPage(url);
+        By locator = By.xpath("//span[contains(@class, 'last-JWoJqCpY') and contains(@class, 'js-symbol-last')]");
+        Document documentPage = getDocumentPage(url, locator, null);
         Elements element = documentPage.select("span[class=\"last-JWoJqCpY js-symbol-last\"]");
         return element.text().replace("R$", "").trim();
     }

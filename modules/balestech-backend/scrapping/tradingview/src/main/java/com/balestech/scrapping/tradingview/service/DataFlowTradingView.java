@@ -26,6 +26,7 @@ public class DataFlowTradingView {
     private List<AsyncTradingViewFilter> getAsyncTradingViewFilterList(){
         List<IndicatorEnum> listIndicatorEnum = new ArrayList<>();
         listIndicatorEnum.add(IndicatorEnum.PRICE);
+        listIndicatorEnum.add(IndicatorEnum.TARGET);
 
         List<AsyncTradingViewFilter> asyncTradingViewFilterList = new ArrayList<>();
 
